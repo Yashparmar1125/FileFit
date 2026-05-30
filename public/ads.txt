@@ -1,3 +1,2 @@
 # FileFit Authorized Digital Sellers (ads.txt)
-# Replace pub-XXXXXXXXXXXXXXXX with your actual Google AdSense Publisher ID
 google.com, pub-5681219308522655, DIRECT, f08c47fec0942fa0

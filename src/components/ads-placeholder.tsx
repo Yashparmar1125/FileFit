@@ -10,7 +10,7 @@ interface AdsPlaceholderProps {
 
 export default function AdsPlaceholder({ slot, format = "auto", className = "" }: AdsPlaceholderProps) {
   const [isAdBlockerActive, setIsAdBlockerActive] = useState(false);
-  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXX";
+  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-5681219308522655";
 
   useEffect(() => {
     const testAd = document.createElement("div");
@@ -43,6 +43,15 @@ export default function AdsPlaceholder({ slot, format = "auto", className = "" }
     }
   };
 
+  const getDefaultSlot = () => {
+    switch (format) {
+      case "leaderboard": return "1414039077";
+      case "rectangle": return "7787875731";
+      case "horizontal": return "2292006478";
+      default: return "2292006478";
+    }
+  };
+
   if (isAdBlockerActive) return <div className="hidden" aria-hidden="true" />;
 
   return (
@@ -57,7 +66,7 @@ export default function AdsPlaceholder({ slot, format = "auto", className = "" }
         className="adsbygoogle"
         style={{ display: "block" }}
         data-ad-client={publisherId}
-        data-ad-slot={slot || "1234567890"}
+        data-ad-slot={slot || getDefaultSlot()}
         data-ad-format={format}
         data-full-width-responsive="true"
       />
