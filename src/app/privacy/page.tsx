@@ -7,8 +7,8 @@ export default function PrivacyPage() {
     <>
       <Header />
 
-      <main className="flex-1 bg-[#f8f9fa] py-12 px-4">
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-[#e9ecef] p-8 sm:p-12 space-y-8 shadow-sm">
+      <main className="flex-1 bg-bone py-12 px-4">
+        <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-bone-dark p-8 sm:p-12 space-y-8 shadow-sm">
 
           <div className="text-center space-y-3">
             <div className="inline-flex p-3 rounded-2xl" style={{ background: "#fff4f0", color: "#FF5C2E" }}>
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
             <p className="text-gray-400 text-xs">Last Updated: May 30, 2026</p>
           </div>
 
-          <div className="border-t border-[#e9ecef] pt-8 space-y-6 text-gray-600 text-sm leading-relaxed">
+          <div className="border-t border-bone-dark pt-8 space-y-6 text-gray-600 text-sm leading-relaxed">
             <p>
               At <strong className="text-gray-900">FileFit</strong>, we take user privacy extremely seriously. Our platform is architected around a single, foundational principle:{" "}
               <strong className="text-gray-900">your files are your own, and they should never leave your device.</strong>
