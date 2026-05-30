@@ -1,12 +1,390 @@
 [
-  { "size": "100kb", "targetSizeKb": 100 },
-  { "size": "200kb", "targetSizeKb": 200 },
-  { "size": "300kb", "targetSizeKb": 300 },
-  { "size": "400kb", "targetSizeKb": 400 },
-  { "size": "500kb", "targetSizeKb": 500 },
-  { "size": "600kb", "targetSizeKb": 600 },
-  { "size": "700kb", "targetSizeKb": 700 },
-  { "size": "800kb", "targetSizeKb": 800 },
-  { "size": "900kb", "targetSizeKb": 900 },
-  { "size": "1mb", "targetSizeKb": 1024 }
+  {
+    "size": "50kb",
+    "targetSizeKb": 50
+  },
+  {
+    "size": "60kb",
+    "targetSizeKb": 60
+  },
+  {
+    "size": "70kb",
+    "targetSizeKb": 70
+  },
+  {
+    "size": "80kb",
+    "targetSizeKb": 80
+  },
+  {
+    "size": "90kb",
+    "targetSizeKb": 90
+  },
+  {
+    "size": "100kb",
+    "targetSizeKb": 100
+  },
+  {
+    "size": "110kb",
+    "targetSizeKb": 110
+  },
+  {
+    "size": "120kb",
+    "targetSizeKb": 120
+  },
+  {
+    "size": "130kb",
+    "targetSizeKb": 130
+  },
+  {
+    "size": "140kb",
+    "targetSizeKb": 140
+  },
+  {
+    "size": "150kb",
+    "targetSizeKb": 150
+  },
+  {
+    "size": "160kb",
+    "targetSizeKb": 160
+  },
+  {
+    "size": "170kb",
+    "targetSizeKb": 170
+  },
+  {
+    "size": "180kb",
+    "targetSizeKb": 180
+  },
+  {
+    "size": "190kb",
+    "targetSizeKb": 190
+  },
+  {
+    "size": "200kb",
+    "targetSizeKb": 200
+  },
+  {
+    "size": "210kb",
+    "targetSizeKb": 210
+  },
+  {
+    "size": "220kb",
+    "targetSizeKb": 220
+  },
+  {
+    "size": "230kb",
+    "targetSizeKb": 230
+  },
+  {
+    "size": "240kb",
+    "targetSizeKb": 240
+  },
+  {
+    "size": "250kb",
+    "targetSizeKb": 250
+  },
+  {
+    "size": "260kb",
+    "targetSizeKb": 260
+  },
+  {
+    "size": "270kb",
+    "targetSizeKb": 270
+  },
+  {
+    "size": "280kb",
+    "targetSizeKb": 280
+  },
+  {
+    "size": "290kb",
+    "targetSizeKb": 290
+  },
+  {
+    "size": "300kb",
+    "targetSizeKb": 300
+  },
+  {
+    "size": "310kb",
+    "targetSizeKb": 310
+  },
+  {
+    "size": "320kb",
+    "targetSizeKb": 320
+  },
+  {
+    "size": "330kb",
+    "targetSizeKb": 330
+  },
+  {
+    "size": "340kb",
+    "targetSizeKb": 340
+  },
+  {
+    "size": "350kb",
+    "targetSizeKb": 350
+  },
+  {
+    "size": "360kb",
+    "targetSizeKb": 360
+  },
+  {
+    "size": "370kb",
+    "targetSizeKb": 370
+  },
+  {
+    "size": "380kb",
+    "targetSizeKb": 380
+  },
+  {
+    "size": "390kb",
+    "targetSizeKb": 390
+  },
+  {
+    "size": "400kb",
+    "targetSizeKb": 400
+  },
+  {
+    "size": "410kb",
+    "targetSizeKb": 410
+  },
+  {
+    "size": "420kb",
+    "targetSizeKb": 420
+  },
+  {
+    "size": "430kb",
+    "targetSizeKb": 430
+  },
+  {
+    "size": "440kb",
+    "targetSizeKb": 440
+  },
+  {
+    "size": "450kb",
+    "targetSizeKb": 450
+  },
+  {
+    "size": "460kb",
+    "targetSizeKb": 460
+  },
+  {
+    "size": "470kb",
+    "targetSizeKb": 470
+  },
+  {
+    "size": "480kb",
+    "targetSizeKb": 480
+  },
+  {
+    "size": "490kb",
+    "targetSizeKb": 490
+  },
+  {
+    "size": "500kb",
+    "targetSizeKb": 500
+  },
+  {
+    "size": "510kb",
+    "targetSizeKb": 510
+  },
+  {
+    "size": "520kb",
+    "targetSizeKb": 520
+  },
+  {
+    "size": "530kb",
+    "targetSizeKb": 530
+  },
+  {
+    "size": "540kb",
+    "targetSizeKb": 540
+  },
+  {
+    "size": "550kb",
+    "targetSizeKb": 550
+  },
+  {
+    "size": "560kb",
+    "targetSizeKb": 560
+  },
+  {
+    "size": "570kb",
+    "targetSizeKb": 570
+  },
+  {
+    "size": "580kb",
+    "targetSizeKb": 580
+  },
+  {
+    "size": "590kb",
+    "targetSizeKb": 590
+  },
+  {
+    "size": "600kb",
+    "targetSizeKb": 600
+  },
+  {
+    "size": "610kb",
+    "targetSizeKb": 610
+  },
+  {
+    "size": "620kb",
+    "targetSizeKb": 620
+  },
+  {
+    "size": "630kb",
+    "targetSizeKb": 630
+  },
+  {
+    "size": "640kb",
+    "targetSizeKb": 640
+  },
+  {
+    "size": "650kb",
+    "targetSizeKb": 650
+  },
+  {
+    "size": "660kb",
+    "targetSizeKb": 660
+  },
+  {
+    "size": "670kb",
+    "targetSizeKb": 670
+  },
+  {
+    "size": "680kb",
+    "targetSizeKb": 680
+  },
+  {
+    "size": "690kb",
+    "targetSizeKb": 690
+  },
+  {
+    "size": "700kb",
+    "targetSizeKb": 700
+  },
+  {
+    "size": "710kb",
+    "targetSizeKb": 710
+  },
+  {
+    "size": "720kb",
+    "targetSizeKb": 720
+  },
+  {
+    "size": "730kb",
+    "targetSizeKb": 730
+  },
+  {
+    "size": "740kb",
+    "targetSizeKb": 740
+  },
+  {
+    "size": "750kb",
+    "targetSizeKb": 750
+  },
+  {
+    "size": "760kb",
+    "targetSizeKb": 760
+  },
+  {
+    "size": "770kb",
+    "targetSizeKb": 770
+  },
+  {
+    "size": "780kb",
+    "targetSizeKb": 780
+  },
+  {
+    "size": "790kb",
+    "targetSizeKb": 790
+  },
+  {
+    "size": "800kb",
+    "targetSizeKb": 800
+  },
+  {
+    "size": "810kb",
+    "targetSizeKb": 810
+  },
+  {
+    "size": "820kb",
+    "targetSizeKb": 820
+  },
+  {
+    "size": "830kb",
+    "targetSizeKb": 830
+  },
+  {
+    "size": "840kb",
+    "targetSizeKb": 840
+  },
+  {
+    "size": "850kb",
+    "targetSizeKb": 850
+  },
+  {
+    "size": "860kb",
+    "targetSizeKb": 860
+  },
+  {
+    "size": "870kb",
+    "targetSizeKb": 870
+  },
+  {
+    "size": "880kb",
+    "targetSizeKb": 880
+  },
+  {
+    "size": "890kb",
+    "targetSizeKb": 890
+  },
+  {
+    "size": "900kb",
+    "targetSizeKb": 900
+  },
+  {
+    "size": "910kb",
+    "targetSizeKb": 910
+  },
+  {
+    "size": "920kb",
+    "targetSizeKb": 920
+  },
+  {
+    "size": "930kb",
+    "targetSizeKb": 930
+  },
+  {
+    "size": "940kb",
+    "targetSizeKb": 940
+  },
+  {
+    "size": "950kb",
+    "targetSizeKb": 950
+  },
+  {
+    "size": "960kb",
+    "targetSizeKb": 960
+  },
+  {
+    "size": "970kb",
+    "targetSizeKb": 970
+  },
+  {
+    "size": "980kb",
+    "targetSizeKb": 980
+  },
+  {
+    "size": "990kb",
+    "targetSizeKb": 990
+  },
+  {
+    "size": "1000kb",
+    "targetSizeKb": 1000
+  },
+  {
+    "size": "1mb",
+    "targetSizeKb": 1024
+  }
 ]
