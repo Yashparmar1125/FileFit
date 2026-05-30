@@ -5,7 +5,7 @@ import PHOTO_SIZES_DATA from "@/data/photo-sizes.json";
 import SIG_SIZES_DATA from "@/data/signature-sizes.json";
 import PDF_SIZES_DATA from "@/data/pdf-sizes.json";
 
-const DOMAIN = "https://filefit.com";
+const DOMAIN = "https://filefit.online";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [];

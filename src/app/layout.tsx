@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "FileFit — Resize, Compress & Format Files Online Free",
   description:
     "Compress images, resize photos, clean signatures, and optimize PDFs to exact upload requirements. 100% client-side — your files never leave your device.",
-  metadataBase: new URL("https://filefit.com"),
+  metadataBase: new URL("https://filefit.online"),
 };
 
 export default function RootLayout({

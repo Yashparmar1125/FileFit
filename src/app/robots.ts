@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://filefit.com/sitemap.xml",
+    sitemap: "https://filefit.online/sitemap.xml",
   };
 }
