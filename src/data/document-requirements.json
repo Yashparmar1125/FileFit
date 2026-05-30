@@ -1,0 +1,128 @@
+[
+  {
+    "slug": "passport-india",
+    "name": "Indian Passport Photo",
+    "widthPx": 350,
+    "heightPx": 450,
+    "aspectRatio": 0.77,
+    "maxSizeKb": 100,
+    "instructions": [
+      "Dimensions: 3.5 cm x 4.5 cm (width x height).",
+      "Face should cover 70-80% of the photograph area.",
+      "Background must be plain white or off-white."
+    ]
+  },
+  {
+    "slug": "pan-card-photo",
+    "name": "PAN Card Application Photo",
+    "widthPx": 200,
+    "heightPx": 280,
+    "aspectRatio": 0.71,
+    "maxSizeKb": 20,
+    "instructions": [
+      "Dimensions: 2.5 cm x 3.5 cm.",
+      "File size must be strictly under 20KB in JPEG format.",
+      "Ensure resolution is 200 DPI scan."
+    ]
+  },
+  {
+    "slug": "pan-card-signature",
+    "name": "PAN Card Signature",
+    "widthPx": 360,
+    "heightPx": 160,
+    "aspectRatio": 2.25,
+    "maxSizeKb": 10,
+    "instructions": [
+      "Dimensions: 2 cm x 4.5 cm.",
+      "File size must be strictly under 10KB.",
+      "Use black ink on plain white paper."
+    ]
+  },
+  {
+    "slug": "aadhaar-card-scan",
+    "name": "Aadhaar Card Document Scan",
+    "aspectRatio": 1.54,
+    "maxSizeKb": 300,
+    "instructions": [
+      "Supported formats: PDF, JPEG.",
+      "Ensure all text, including the 12-digit UID number, is clearly readable.",
+      "Max file size is usually 300KB."
+    ]
+  },
+  {
+    "slug": "visa-usa",
+    "name": "United States (US) Visa Photo",
+    "widthPx": 600,
+    "heightPx": 600,
+    "aspectRatio": 1.0,
+    "maxSizeKb": 240,
+    "instructions": [
+      "Dimensions: 2 x 2 inches (51 mm x 51 mm) square shape.",
+      "Head height must be between 50% and 69% of the total height.",
+      "Must be taken on a pure white background, looking straight at the camera."
+    ]
+  },
+  {
+    "slug": "visa-schengen",
+    "name": "Schengen Visa Photo",
+    "widthPx": 350,
+    "heightPx": 450,
+    "aspectRatio": 0.77,
+    "maxSizeKb": 200,
+    "instructions": [
+      "Dimensions: 35 mm x 45 mm.",
+      "Close up of head and top of shoulders, covering 70-80% of photo.",
+      "Background must be light-coloured, preferably white or light grey."
+    ]
+  },
+  {
+    "slug": "visa-uk",
+    "name": "United Kingdom (UK) Visa Photo",
+    "widthPx": 350,
+    "heightPx": 450,
+    "aspectRatio": 0.77,
+    "maxSizeKb": 200,
+    "instructions": [
+      "Dimensions: 35 mm width x 45 mm height.",
+      "Background must be light grey or cream.",
+      "Spectacles must be removed."
+    ]
+  },
+  {
+    "slug": "visa-canada",
+    "name": "Canada Visa Photo",
+    "widthPx": 350,
+    "heightPx": 450,
+    "aspectRatio": 0.77,
+    "maxSizeKb": 240,
+    "instructions": [
+      "Dimensions: 35 mm width x 45 mm height.",
+      "Face height should be between 31 mm and 36 mm.",
+      "Must be taken with a neutral expression."
+    ]
+  },
+  {
+    "slug": "driving-license-photo",
+    "name": "Driving License Photo (Sarathi)",
+    "widthPx": 200,
+    "heightPx": 230,
+    "aspectRatio": 0.87,
+    "maxSizeKb": 20,
+    "instructions": [
+      "File size: 10KB to 20KB.",
+      "Ensure photo matches the physical appearance on application day."
+    ]
+  },
+  {
+    "slug": "voter-id-photo",
+    "name": "Voter ID Photo (NVSP)",
+    "widthPx": 320,
+    "heightPx": 240,
+    "aspectRatio": 1.33,
+    "maxSizeKb": 100,
+    "instructions": [
+      "Passport-style photo under 100KB in JPG.",
+      "Clear front-facing image."
+    ]
+  }
+]

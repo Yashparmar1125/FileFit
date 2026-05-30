@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── FileFit Brand Palette ─────────────────────────────── */
+  /* Ignite Orange — primary brand */
+  --color-brand-50: #fff4f0;
+  --color-brand-100: #ffe5db;
+  --color-brand-200: #ffcab8;
+  --color-brand-300: #ffa080;
+  --color-brand-400: #ff7a52;
+  --color-brand-500: #FF5C2E;
+  /* Ignite Orange */
+  --color-brand-600: #e04820;
+  /* fold shadow */
+  --color-brand-700: #cc3a10;
+  /* fold corner */
+  --color-brand-800: #a82e0c;
+  --color-brand-900: #7a2206;
+  --color-brand-950: #3d1003;
+
+  /* Void Black scale */
+  --color-void-950: #0F0F0F;
+  /* Void Black */
+  --color-void-900: #161616;
+  --color-void-800: #1e1e1e;
+  --color-void-700: #2A2A2A;
+  /* Elevated */
+  --color-void-600: #3a3a3a;
+  --color-void-500: #555555;
+  --color-void-400: #888888;
+  /* Dust */
+  --color-void-300: #aaaaaa;
+  --color-void-200: #cccccc;
+  --color-void-100: #e5e5e5;
+
+  /* Bone White — warm off-white */
+  --color-bone: #F5F0E8;
+  --color-bone-dark: #e8e2d8;
+  --color-bone-darker: #C8C2B8;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0F0F0F;
+  --brand: #FF5C2E;
+  --bone: #F5F0E8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Layout utilities ──────────────────────────────────────── */
+
+/* White card with subtle border */
+.panel {
+  background: #ffffff;
+  border: 1px solid #e8e2d8;
+  border-radius: 16px;
+}
+
+/* Bone-tinted section background */
+.section-bone {
+  background: #F5F0E8;
+}
+
+/* Light warm gray page background */
+.page-bg {
+  background: #faf8f5;
+}
+
+/* ── Tool card ─────────────────────────────────────────────── */
+.tool-card {
+  background: #ffffff;
+  border: 1px solid #e8e2d8;
+  border-radius: 16px;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.tool-card:hover {
+  border-color: #FF5C2E;
+  box-shadow: 0 4px 20px rgba(255, 92, 46, 0.12);
+  transform: translateY(-2px);
+}
+
+/* ── Brand gradient text ───────────────────────────────────── */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #FF5C2E 0%, #ff7a52 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Dropzone ──────────────────────────────────────────────── */
+.dropzone-idle {
+  border: 2px dashed #C8C2B8;
+  background: #faf8f5;
+  transition: all 0.18s ease;
+}
+
+.dropzone-idle:hover {
+  border-color: #FF5C2E;
+  background: #fff4f0;
+}
+
+.dropzone-active {
+  border-color: #FF5C2E !important;
+  background: #fff4f0 !important;
+  transform: scale(1.01);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F0E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8C2B8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+
+/* ── Animations ────────────────────────────────────────────── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s ease both;
+}
+
+/* Range input thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FF5C2E;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(255, 92, 46, 0.3);
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: #e8e2d8;
+}

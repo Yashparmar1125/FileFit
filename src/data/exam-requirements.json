@@ -1,0 +1,340 @@
+[
+  {
+    "slug": "ssc-cgl",
+    "name": "SSC CGL (Staff Selection Commission)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo must be in JPEG format (20KB to 50KB).",
+      "Dimensions: 3.5 cm width x 4.5 cm height.",
+      "The photograph should be without cap, spectacles and front view of the face must be visible."
+    ]
+  },
+  {
+    "slug": "ssc-chsl",
+    "name": "SSC CHSL",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo must be in JPEG format (20KB to 50KB).",
+      "Signature must be between 10KB and 20KB.",
+      "Spectacles and cap are not allowed in the photograph."
+    ]
+  },
+  {
+    "slug": "ssc-gd",
+    "name": "SSC GD Constable",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Upload photo between 20KB - 50KB.",
+      "Upload signature between 10KB - 20KB.",
+      "Ensure front view face is clearly visible."
+    ]
+  },
+  {
+    "slug": "upsc-ias",
+    "name": "UPSC IAS (Union Public Service Commission)",
+    "photoWidth": 350,
+    "photoHeight": 350,
+    "photoMinKb": 20,
+    "photoMaxKb": 300,
+    "sigWidth": 350,
+    "sigHeight": 350,
+    "sigMinKb": 20,
+    "sigMaxKb": 300,
+    "instructions": [
+      "Photo and Signature must be in JPG format.",
+      "Dimensions must be at least 350 x 350 pixels.",
+      "File size must be between 20KB and 300KB for both files."
+    ]
+  },
+  {
+    "slug": "upsc-nda",
+    "name": "UPSC NDA / NA",
+    "photoWidth": 350,
+    "photoHeight": 350,
+    "photoMinKb": 20,
+    "photoMaxKb": 300,
+    "sigWidth": 350,
+    "sigHeight": 350,
+    "sigMinKb": 20,
+    "sigMaxKb": 300,
+    "instructions": [
+      "Minimum dimensions: 350 x 350 pixels.",
+      "Maximum dimensions: 1000 x 1000 pixels.",
+      "Ensure file size is within 20KB to 300KB."
+    ]
+  },
+  {
+    "slug": "ibps-po",
+    "name": "IBPS PO (Institute of Banking Personnel Selection)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo dimensions: 200 x 230 pixels (20KB - 50KB).",
+      "Signature dimensions: 140 x 60 pixels (10KB - 20KB).",
+      "Do not sign in CAPITAL LETTERS as they are rejected."
+    ]
+  },
+  {
+    "slug": "ibps-clerk",
+    "name": "IBPS Clerk",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo size: 20KB to 50KB in JPG format.",
+      "Signature size: 10KB to 20KB in JPG format.",
+      "Signature should be done with black ink on white paper."
+    ]
+  },
+  {
+    "slug": "sbi-po",
+    "name": "SBI PO (State Bank of India)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo dimensions: 200 x 230 pixels (20KB to 50KB).",
+      "Signature dimensions: 140 x 60 pixels (10KB to 20KB).",
+      "Sign with black ink on white paper."
+    ]
+  },
+  {
+    "slug": "sbi-clerk",
+    "name": "SBI Clerk",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Passport size photo: 20KB to 50KB in JPG.",
+      "Signature scan: 10KB to 20KB in JPG.",
+      "Ensure signature is clear and not blurry."
+    ]
+  },
+  {
+    "slug": "rrb-ntpc",
+    "name": "RRB NTPC (Railway Recruitment Board)",
+    "photoWidth": 320,
+    "photoHeight": 240,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Photo size: 35mm x 45mm, JPEG format, 20KB to 50KB.",
+      "Signature size: 10KB to 30KB, JPEG format.",
+      "Background of the photo must be light or white."
+    ]
+  },
+  {
+    "slug": "rrb-alp",
+    "name": "RRB Assistant Loco Pilot (ALP)",
+    "photoWidth": 320,
+    "photoHeight": 240,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Photo: 20KB - 50KB, white background.",
+      "Signature: 10KB - 30KB on white paper with black pen."
+    ]
+  },
+  {
+    "slug": "mpsc-state",
+    "name": "MPSC (Maharashtra Public Service Commission)",
+    "photoWidth": 125,
+    "photoHeight": 165,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 125,
+    "sigHeight": 80,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo dimensions: 125 x 165 pixels (20KB - 50KB).",
+      "Signature dimensions: 125 x 80 pixels (10KB - 20KB)."
+    ]
+  },
+  {
+    "slug": "gpsc-exam",
+    "name": "GPSC (Gujarat Public Service Commission)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo size: 20KB to 50KB.",
+      "Signature size: 10KB to 20KB.",
+      "Standard specifications mapping NSDL."
+    ]
+  },
+  {
+    "slug": "tnpsc-group",
+    "name": "TNPSC (Tamil Nadu Public Service Commission)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo size limit: 20KB to 50KB.",
+      "Signature size limit: 10KB to 20KB.",
+      "Ensure clean white background on photos."
+    ]
+  },
+  {
+    "slug": "uppsc-exam",
+    "name": "UPPSC (Uttar Pradesh Public Service Commission)",
+    "photoWidth": 350,
+    "photoHeight": 450,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 350,
+    "sigHeight": 150,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Width: 3.5 cm, Height: 4.5 cm (photo).",
+      "Photo size limit: 20KB - 50KB.",
+      "Signature size limit: 10KB - 20KB."
+    ]
+  },
+  {
+    "slug": "bpsc-exam",
+    "name": "BPSC (Bihar Public Service Commission)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 15,
+    "photoMaxKb": 25,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo limit is strictly under 25KB.",
+      "Signature limit is strictly between 10KB and 20KB.",
+      "File format must be JPG/JPEG."
+    ]
+  },
+  {
+    "slug": "neet-ug",
+    "name": "NEET UG (National Eligibility cum Entrance Test)",
+    "photoWidth": 400,
+    "photoHeight": 600,
+    "photoMinKb": 10,
+    "photoMaxKb": 200,
+    "sigWidth": 200,
+    "sigHeight": 100,
+    "sigMinKb": 4,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Passport and Postcard size photos required.",
+      "Passport photo size: 10KB to 200KB.",
+      "Signature size: 4KB to 30KB."
+    ]
+  },
+  {
+    "slug": "jee-main",
+    "name": "JEE Main (Joint Entrance Examination)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 200,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 4,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Photo: 10KB to 200KB in JPG/JPEG.",
+      "Signature: 4KB to 30KB in JPG/JPEG.",
+      "Background should be white or light-coloured."
+    ]
+  },
+  {
+    "slug": "gate-exam",
+    "name": "GATE (Graduate Aptitude Test in Engineering)",
+    "photoWidth": 240,
+    "photoHeight": 320,
+    "photoMinKb": 5,
+    "photoMaxKb": 200,
+    "sigWidth": 160,
+    "sigHeight": 560,
+    "sigMinKb": 3,
+    "sigMaxKb": 100,
+    "instructions": [
+      "High resolution photo (5KB to 200KB) required.",
+      "Signature must fit 160 x 560 pixel bounding box.",
+      "Ensure signature is on white paper with black ink."
+    ]
+  },
+  {
+    "slug": "cat-exam",
+    "name": "CAT (Common Admission Test)",
+    "photoWidth": 150,
+    "photoHeight": 200,
+    "photoMinKb": 20,
+    "photoMaxKb": 80,
+    "sigWidth": 150,
+    "sigHeight": 80,
+    "sigMinKb": 20,
+    "sigMaxKb": 80,
+    "instructions": [
+      "Dimensions: 30mm width x 45mm height (photo).",
+      "File size limit: 20KB to 80KB.",
+      "Ensure background is plain white."
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+[
+  { "size": "10kb", "targetSizeKb": 10 },
+  { "size": "20kb", "targetSizeKb": 20 },
+  { "size": "30kb", "targetSizeKb": 30 },
+  { "size": "40kb", "targetSizeKb": 40 },
+  { "size": "50kb", "targetSizeKb": 50 },
+  { "size": "60kb", "targetSizeKb": 60 },
+  { "size": "70kb", "targetSizeKb": 70 },
+  { "size": "80kb", "targetSizeKb": 80 },
+  { "size": "90kb", "targetSizeKb": 90 },
+  { "size": "100kb", "targetSizeKb": 100 },
+  { "size": "120kb", "targetSizeKb": 120 },
+  { "size": "150kb", "targetSizeKb": 150 },
+  { "size": "200kb", "targetSizeKb": 200 },
+  { "size": "250kb", "targetSizeKb": 250 },
+  { "size": "300kb", "targetSizeKb": 300 },
+  { "size": "350kb", "targetSizeKb": 350 },
+  { "size": "400kb", "targetSizeKb": 400 },
+  { "size": "450kb", "targetSizeKb": 450 },
+  { "size": "500kb", "targetSizeKb": 500 }
+]

@@ -1,0 +1,12 @@
+[
+  { "size": "100kb", "targetSizeKb": 100 },
+  { "size": "200kb", "targetSizeKb": 200 },
+  { "size": "300kb", "targetSizeKb": 300 },
+  { "size": "400kb", "targetSizeKb": 400 },
+  { "size": "500kb", "targetSizeKb": 500 },
+  { "size": "600kb", "targetSizeKb": 600 },
+  { "size": "700kb", "targetSizeKb": 700 },
+  { "size": "800kb", "targetSizeKb": 800 },
+  { "size": "900kb", "targetSizeKb": 900 },
+  { "size": "1mb", "targetSizeKb": 1024 }
+]

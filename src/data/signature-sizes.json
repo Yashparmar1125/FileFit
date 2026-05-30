@@ -1,0 +1,11 @@
+[
+  { "size": "5kb", "targetSizeKb": 5 },
+  { "size": "10kb", "targetSizeKb": 10 },
+  { "size": "15kb", "targetSizeKb": 15 },
+  { "size": "20kb", "targetSizeKb": 20 },
+  { "size": "25kb", "targetSizeKb": 25 },
+  { "size": "30kb", "targetSizeKb": 30 },
+  { "size": "40kb", "targetSizeKb": 40 },
+  { "size": "50kb", "targetSizeKb": 50 },
+  { "size": "100kb", "targetSizeKb": 100 }
+]
