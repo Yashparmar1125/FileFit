@@ -126,11 +126,24 @@ export default function Footer() {
             <p className="text-xs text-[#aaa] mb-4 leading-relaxed">
               Making files comply with government exams, visa applications, and web uploads instantly in your browser.
             </p>
-            <div className="flex items-center gap-3 text-xs text-[#aaa]">
+            <div className="flex flex-wrap items-center gap-3 text-xs text-[#aaa]">
               <span>© 2026 FileFit</span>
+              <span>·</span>
+              <Link href="/about" className="hover:text-[#FF5C2E] transition-colors">
+                About
+              </Link>
               <span>·</span>
               <Link href="/privacy" className="hover:text-[#FF5C2E] transition-colors">
                 Privacy
+              </Link>
+              <span>·</span>
+              <Link
+                href="https://github.com/Yashparmar1125/FileFit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#FF5C2E] transition-colors"
+              >
+                GitHub
               </Link>
             </div>
           </div>

@@ -5,6 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/_next/", "/static/", "/api/"],
     },
     sitemap: "https://filefit.online/sitemap.xml",
   };

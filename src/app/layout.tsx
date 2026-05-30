@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -28,6 +29,12 @@ export default function RootLayout({
         className="min-h-full flex flex-col bg-white text-[#0F0F0F]"
         style={{ fontFamily: "var(--font-jakarta), system-ui, sans-serif" }}
       >
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXX"}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         {children}
         <Analytics />
       </body>

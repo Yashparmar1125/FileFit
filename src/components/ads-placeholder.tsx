@@ -10,6 +10,7 @@ interface AdsPlaceholderProps {
 
 export default function AdsPlaceholder({ slot, format = "auto", className = "" }: AdsPlaceholderProps) {
   const [isAdBlockerActive, setIsAdBlockerActive] = useState(false);
+  const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXX";
 
   useEffect(() => {
     const testAd = document.createElement("div");
@@ -17,8 +18,17 @@ export default function AdsPlaceholder({ slot, format = "auto", className = "" }
     testAd.className = "adsbygoogle";
     testAd.style.cssText = "position:absolute;left:-9999px;top:-9999px;";
     document.body.appendChild(testAd);
+    
     setTimeout(() => {
-      if (testAd.offsetHeight === 0) setIsAdBlockerActive(true);
+      if (testAd.offsetHeight === 0) {
+        setIsAdBlockerActive(true);
+      } else {
+        try {
+          ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
+        } catch (e) {
+          console.error("AdSense trigger error:", e);
+        }
+      }
       testAd.remove();
     }, 100);
   }, []);
@@ -46,7 +56,7 @@ export default function AdsPlaceholder({ slot, format = "auto", className = "" }
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXX"
+        data-ad-client={publisherId}
         data-ad-slot={slot || "1234567890"}
         data-ad-format={format}
         data-full-width-responsive="true"

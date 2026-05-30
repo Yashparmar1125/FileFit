@@ -54,7 +54,7 @@
     "name": "United States (US) Visa Photo",
     "widthPx": 600,
     "heightPx": 600,
-    "aspectRatio": 1.0,
+    "aspectRatio": 1,
     "maxSizeKb": 240,
     "instructions": [
       "Dimensions: 2 x 2 inches (51 mm x 51 mm) square shape.",
@@ -123,6 +123,128 @@
     "instructions": [
       "Passport-style photo under 100KB in JPG.",
       "Clear front-facing image."
+    ]
+  },
+  {
+    "slug": "visa-malaysia",
+    "name": "Malaysia E-Visa Photo",
+    "maxSizeKb": 50,
+    "widthPx": 350,
+    "heightPx": 500,
+    "aspectRatio": "35:50",
+    "instructions": [
+      "Upload size strictly under 50KB in JPG format.",
+      "Studio quality photograph required with a clear white background."
+    ]
+  },
+  {
+    "slug": "visa-saudi",
+    "name": "Saudi Arabia Visa Photo",
+    "maxSizeKb": 100,
+    "widthPx": 200,
+    "heightPx": 200,
+    "aspectRatio": "1:1",
+    "instructions": [
+      "Square aspect ratio (2x2 inches / 200x200 pixels).",
+      "Upload size strictly under 100KB in JPG format."
+    ]
+  },
+  {
+    "slug": "visa-dubai",
+    "name": "Dubai / UAE Tourist Visa Photo",
+    "maxSizeKb": 100,
+    "widthPx": 300,
+    "heightPx": 400,
+    "aspectRatio": "3:4",
+    "instructions": [
+      "Dimensions: 300 x 400 pixels.",
+      "Upload size strictly under 100KB in JPG."
+    ]
+  },
+  {
+    "slug": "visa-china",
+    "name": "China Visa Photo",
+    "maxSizeKb": 120,
+    "widthPx": 354,
+    "heightPx": 472,
+    "aspectRatio": "354:472",
+    "instructions": [
+      "Dimensions: 354 x 472 pixels.",
+      "File size must be between 40KB and 120KB in JPG/JPEG."
+    ]
+  },
+  {
+    "slug": "visa-nz",
+    "name": "New Zealand Visa Photo",
+    "maxSizeKb": 3000,
+    "widthPx": 900,
+    "heightPx": 1200,
+    "aspectRatio": "3:4",
+    "instructions": [
+      "High resolution photo (between 500KB and 3000KB).",
+      "Dimensions: 900 x 1200 pixels."
+    ]
+  },
+  {
+    "slug": "driving-license-india",
+    "name": "Indian Driving License Photo",
+    "maxSizeKb": 20,
+    "widthPx": 200,
+    "heightPx": 230,
+    "aspectRatio": "200:230",
+    "instructions": [
+      "Scanned portrait photo strictly under 20KB for Sarathi portal."
+    ]
+  },
+  {
+    "slug": "voter-id-india",
+    "name": "Indian Voter ID Photo",
+    "maxSizeKb": 100,
+    "widthPx": 240,
+    "heightPx": 320,
+    "aspectRatio": "3:4",
+    "instructions": [
+      "Upload photo strictly under 100KB in JPG format."
+    ]
+  },
+  {
+    "slug": "ews-certificate",
+    "name": "EWS Income Certificate Scan",
+    "maxSizeKb": 300,
+    "instructions": [
+      "Scan EWS certificate as PDF or JPG strictly under 300KB."
+    ]
+  },
+  {
+    "slug": "caste-certificate",
+    "name": "Caste / Category Certificate Scan",
+    "maxSizeKb": 300,
+    "instructions": [
+      "Scan certificate as PDF or JPG strictly under 300KB."
+    ]
+  },
+  {
+    "slug": "marksheet-10th",
+    "name": "10th Class Marksheet / Certificate",
+    "maxSizeKb": 500,
+    "instructions": [
+      "Upload scanned mark sheet strictly under 500KB in PDF or JPG."
+    ]
+  },
+  {
+    "slug": "marksheet-12th",
+    "name": "12th Class Marksheet / Certificate",
+    "maxSizeKb": 500,
+    "instructions": [
+      "Upload scanned mark sheet strictly under 500KB in PDF or JPG."
+    ]
+  },
+  {
+    "slug": "resume-pdf",
+    "name": "Resume / CV PDF Document",
+    "maxSizeKb": 500,
+    "instructions": [
+      "Compress your resume to strictly under 500KB in PDF format."
     ]
   }
 ]

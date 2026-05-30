@@ -22,9 +22,7 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
   };
 }
 
-export async function generateStaticParams() {
-  return SIG_SIZES_DATA.map((item) => ({ size: item.size }));
-}
+export const dynamicParams = true;
 
 export default async function SignatureSizePage({ params }: RouteParams) {
   const { size } = await params;

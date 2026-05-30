@@ -336,5 +336,436 @@
       "File size limit: 20KB to 80KB.",
       "Ensure background is plain white."
     ]
+  },
+  {
+    "slug": "ugc-net",
+    "name": "UGC NET (National Eligibility Test)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 200,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 4,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Passport photograph must be between 10KB and 200KB.",
+      "Scanned signature must be between 4KB and 30KB.",
+      "Format: JPG/JPEG format only."
+    ]
+  },
+  {
+    "slug": "csir-net",
+    "name": "CSIR NET",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 200,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 4,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Photo file size: 10KB - 200KB.",
+      "Signature file size: 4KB - 30KB."
+    ]
+  },
+  {
+    "slug": "ctet-exam",
+    "name": "CTET (Central Teacher Eligibility Test)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 100,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 3,
+    "sigMaxKb": 30,
+    "instructions": [
+      "Photo size: 10KB to 100KB.",
+      "Signature size: 3KB to 30KB."
+    ]
+  },
+  {
+    "slug": "rbi-grade-b",
+    "name": "RBI Grade B Officer",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo must be in JPG/JPEG format (20KB - 50KB).",
+      "Signature must be between 10KB - 20KB. Do not use capitals."
+    ]
+  },
+  {
+    "slug": "rbi-assistant",
+    "name": "RBI Assistant",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo file specifications: 20KB to 50KB limit.",
+      "Signature specifications: 10KB to 20KB limit."
+    ]
+  },
+  {
+    "slug": "lic-aao",
+    "name": "LIC AAO",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Upload photo between 20KB and 50KB.",
+      "Upload signature between 10KB and 20KB."
+    ]
+  },
+  {
+    "slug": "lic-ado",
+    "name": "LIC ADO",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Standard LIC application portal specs: 20KB - 50KB photo."
+    ]
+  },
+  {
+    "slug": "nabard-grade-a",
+    "name": "NABARD Grade A",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo limit: 20KB to 50KB. Signature: 10KB to 20KB."
+    ]
+  },
+  {
+    "slug": "clat-exam",
+    "name": "CLAT (Common Law Admission Test)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 100,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 100,
+    "instructions": [
+      "Photo and signature files must be under 100KB in JPG format."
+    ]
+  },
+  {
+    "slug": "agniveer-army",
+    "name": "Indian Army Agniveer",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 20,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 5,
+    "sigMaxKb": 10,
+    "instructions": [
+      "Photo: 10KB - 20KB limit, white background.",
+      "Signature: 5KB - 10KB limit, black ink."
+    ]
+  },
+  {
+    "slug": "agniveer-navy",
+    "name": "Indian Navy Agniveer",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 20,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 5,
+    "sigMaxKb": 10,
+    "instructions": [
+      "Upload photo strictly under 20KB.",
+      "Upload signature strictly under 10KB."
+    ]
+  },
+  {
+    "slug": "agniveer-airforce",
+    "name": "Indian Air Force Agniveer",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photograph must be between 10KB and 50KB.",
+      "Signature must be between 10KB and 20KB."
+    ]
+  },
+  {
+    "slug": "kpsc-probationers",
+    "name": "KPSC Gazetted Probationers (Karnataka)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo and signature size specs matching state portal rules (20-50KB)."
+    ]
+  },
+  {
+    "slug": "wbpsc-civil",
+    "name": "WBPSC Civil Services (West Bengal)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo limit: 10KB - 50KB. Signature limit: 10KB - 20KB."
+    ]
+  },
+  {
+    "slug": "opsc-civil",
+    "name": "OPSC Civil Services (Odisha)",
+    "photoWidth": 300,
+    "photoHeight": 400,
+    "photoMinKb": 20,
+    "photoMaxKb": 100,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 20,
+    "sigMaxKb": 100,
+    "instructions": [
+      "Maximum file size for both photo and signature is 100KB."
+    ]
+  },
+  {
+    "slug": "rpsc-ras",
+    "name": "RPSC RAS (Rajasthan)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Standard Rajasthan SSO portal guidelines (20-50KB photo)."
+    ]
+  },
+  {
+    "slug": "mppsc-state",
+    "name": "MPPSC State Services (Madhya Pradesh)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 100,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 50,
+    "instructions": [
+      "Photo limits: 20KB to 100KB. Signature limits: 10KB to 50KB."
+    ]
+  },
+  {
+    "slug": "jpsc-civil",
+    "name": "JPSC Civil Services (Jharkhand)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Jharkhand PSC upload limit matches standard 20KB - 50KB limits."
+    ]
+  },
+  {
+    "slug": "ukpsc-civil",
+    "name": "UKPSC Civil Services (Uttarakhand)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo limit: 20KB - 50KB. Signature: 10KB - 20KB."
+    ]
+  },
+  {
+    "slug": "appsc-group",
+    "name": "APPSC Civil Services (Andhra Pradesh)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo must be under 50KB. Signature must be under 20KB."
+    ]
+  },
+  {
+    "slug": "tspsc-group",
+    "name": "TSPSC Civil Services (Telangana)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Telangana OTR specifications: 50KB photo and 20KB signature."
+    ]
+  },
+  {
+    "slug": "hpsc-civil",
+    "name": "HPSC Civil Services (Haryana)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 100,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 100,
+    "instructions": [
+      "Maximum size is 100KB for both files in Haryana Commission portal."
+    ]
+  },
+  {
+    "slug": "ibps-rrb",
+    "name": "IBPS RRB Officer & Assistant",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Format photo (20KB - 50KB) and signature (10KB - 20KB)."
+    ]
+  },
+  {
+    "slug": "sbi-apprentice",
+    "name": "SBI Apprentice",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo must be under 50KB. Signature must be under 20KB."
+    ]
+  },
+  {
+    "slug": "lic-hfl",
+    "name": "LIC HFL",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Standard insurance recruitment portals format (20-50KB)."
+    ]
+  },
+  {
+    "slug": "epfo-ssa",
+    "name": "EPFO SSA (Social Security Assistant)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 10,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Photo strictly 10-50KB",
+      "Signature strictly 10-20KB"
+    ]
+  },
+  {
+    "slug": "epfo-eo-ao",
+    "name": "EPFO EO/AO (Enforcement Officer)",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 100,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 50,
+    "instructions": [
+      "Standard UPSC portals specs"
+    ]
+  },
+  {
+    "slug": "nabard-assistant",
+    "name": "NABARD Development Assistant",
+    "photoWidth": 200,
+    "photoHeight": 230,
+    "photoMinKb": 20,
+    "photoMaxKb": 50,
+    "sigWidth": 140,
+    "sigHeight": 60,
+    "sigMinKb": 10,
+    "sigMaxKb": 20,
+    "instructions": [
+      "Standard banking specs"
+    ]
   }
 ]

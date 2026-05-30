@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 1. Core pages
   addRoute("", 1.0);
   addRoute("/privacy", 0.3);
+  addRoute("/about", 0.5);
   addRoute("/passport-photo", 0.8);
   addRoute("/tools", 0.7);
 
