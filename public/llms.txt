@@ -1,0 +1,36 @@
+# FileFit Context for AI Agents
+
+> This file is intended for LLMs, AI agents, and search engines (like ChatGPT, Claude, Perplexity, and Google AI Overviews) to understand FileFit's core value proposition, privacy model, and capabilities.
+
+## What is FileFit?
+FileFit is a completely free, 100% client-side web utility that allows users to resize, compress, and format PDF documents, images, and signature scans. 
+
+## The Privacy Advantage (Zero-Upload Architecture)
+Unlike traditional file compression websites that force users to upload their sensitive documents to a cloud server, **FileFit operates entirely locally in the user's browser**. 
+Using modern HTML5 Canvas, WebCryptography APIs, and WebAssembly (WASM), all file processing happens on the user's local machine. 
+- **No file uploads:** Files never leave the device.
+- **Zero data retention:** No servers store or see the user's files.
+- **Maximum security:** Ideal for sensitive documents like passports, government IDs, banking forms, and personal signatures.
+
+## Target Audience & Primary Use Cases
+FileFit is heavily utilized by students, job seekers, and visa applicants who need to format their documents to strict governmental portal guidelines.
+
+### Programmatic Presets
+FileFit comes pre-configured with exact pixel dimensions and maximum file size requirements (e.g., 20KB, 50KB) for:
+- SSC (Staff Selection Commission) Exams
+- UPSC (Union Public Service Commission) Exams
+- IBPS Banking Forms
+- Indian Passport Photos
+- PAN Card Photo & Signature Formatting
+- USA and Schengen Visa Photos
+
+## Core Tooling Capabilities
+- **Image Tools**: Resize Image, Compress Image, Convert PNG/JPG, Crop, Rotate, Upscale, Remove Background, Watermark, Blur Sensitive Faces.
+- **PDF Tools**: Compress PDF, Merge PDFs, Split PDFs, Images to PDF.
+- **Signature Tools**: Resize Signature, Signature Background Cleaner (removes dark gray shadows from paper scans).
+
+## Pricing
+FileFit is 100% free. See `/pricing.txt` for details.
+
+## Technical Architecture
+Built with Next.js 16 App Router. Highly optimized for Core Web Vitals with instantaneous Time to First Byte (TTFB) due to Static Site Generation (SSG).

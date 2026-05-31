@@ -1,24 +1,24 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ImageWorkspace from "@/components/image-workspace";
+import BlurFaceWorkspace from "@/components/blur-face-workspace";
 import RelatedTools from "@/components/related-tools";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compress Image Online Free - Reduce Photo Size | FileFit",
-  description: "Free online image compressor. Reduce JPG, PNG, and WebP file sizes instantly in your browser without uploading to a server.",
-  alternates: { canonical: "/tools/image/compress" },
+  title: "Blur Faces in Photos Online Free - Anonymize Images | FileFit",
+  description: "Free online face blur tool. Automatically detect and blur faces in photos securely in your browser without uploading.",
+  alternates: { canonical: "/tools/image/blur-face" },
 };
 
-export default function CompressPage() {
+export default function BlurFacePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "FileFit Image Compressor",
+    "name": "FileFit Face Blur Tool",
     "operatingSystem": "All",
     "applicationCategory": "UtilityApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "Free browser-based utility tool to compress and reduce image file sizes client-side."
+    "description": "Free browser-based utility tool to automatically detect and blur faces in photos client-side."
   };
 
   return (
@@ -26,8 +26,8 @@ export default function CompressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main className="flex-1 bg-white min-h-screen pb-20">
-        <ImageWorkspace defaultMode="compress" />
-        <RelatedTools currentTool="compress-image" />
+        <BlurFaceWorkspace />
+        <RelatedTools currentTool="blur-face" />
       </main>
       <Footer />
     </>

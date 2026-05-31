@@ -13,24 +13,53 @@ export default function AdsPlaceholder({ slot, format = "auto", className = "" }
   const publisherId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-5681219308522655";
 
   useEffect(() => {
+    // Ad-blocker detection
     const testAd = document.createElement("div");
     testAd.innerHTML = "&nbsp;";
     testAd.className = "adsbygoogle";
     testAd.style.cssText = "position:absolute;left:-9999px;top:-9999px;";
     document.body.appendChild(testAd);
-    
-    setTimeout(() => {
-      if (testAd.offsetHeight === 0) {
-        setIsAdBlockerActive(true);
-      } else {
+
+    let pushed = false;
+
+    const tryPush = (insEl: Element | null) => {
+      if (pushed || !insEl) return;
+      // Only push when the container has a real width
+      if ((insEl as HTMLElement).offsetWidth > 0) {
+        pushed = true;
         try {
           ((window as any).adsbygoogle = (window as any).adsbygoogle || []).push({});
         } catch (e) {
           console.error("AdSense trigger error:", e);
         }
       }
+    };
+
+    setTimeout(() => {
+      if (testAd.offsetHeight === 0) {
+        setIsAdBlockerActive(true);
+        testAd.remove();
+        return;
+      }
       testAd.remove();
-    }, 100);
+
+      // Find the <ins> inside this component instance
+      const insEl = document.querySelector(`ins[data-ad-slot="${slot || getDefaultSlot()}"]`);
+
+      // Try immediately first (page may already be laid out)
+      tryPush(insEl);
+
+      if (!pushed && insEl) {
+        // Fall back to ResizeObserver until width is non-zero
+        const ro = new ResizeObserver(() => {
+          tryPush(insEl);
+          if (pushed) ro.disconnect();
+        });
+        ro.observe(insEl);
+        // Safety cleanup after 5 s
+        setTimeout(() => ro.disconnect(), 5000);
+      }
+    }, 200);
   }, []);
 
   const getDimensionsClass = () => {

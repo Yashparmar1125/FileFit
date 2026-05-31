@@ -1,23 +1,24 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import SignatureWorkspace from "@/components/signature-workspace";
+import CropWorkspace from "@/components/crop-workspace";
+import RelatedTools from "@/components/related-tools";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Crop Signature Online Free - Trim Digital Signature | FileFit",
-  description: "Free online signature cropper. Trim and crop digital signature images securely in your browser without uploading to a server.",
-  alternates: { canonical: "/tools/signature/crop" },
+  title: "Crop Image Online Free - Trim Photo Edges | FileFit",
+  description: "Free online image cropper. Trim, crop, and cut JPG, PNG, and WebP images easily in your browser without uploading to a server.",
+  alternates: { canonical: "/tools/image/crop" },
 };
 
-export default function SigCropPage() {
+export default function CropPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "FileFit Signature Cropper",
+    "name": "FileFit Image Cropper",
     "operatingSystem": "All",
     "applicationCategory": "UtilityApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "Free browser-based utility tool to crop and trim digital signature images client-side."
+    "description": "Free browser-based utility tool to crop and trim images client-side."
   };
 
   return (
@@ -25,7 +26,8 @@ export default function SigCropPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main className="flex-1 bg-white min-h-screen pb-20">
-        <SignatureWorkspace defaultMode="crop" />
+        <CropWorkspace />
+        <RelatedTools currentTool="crop" />
       </main>
       <Footer />
     </>

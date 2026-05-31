@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ImageWorkspace from "@/components/image-workspace";
 import AdsPlaceholder from "@/components/ads-placeholder";
+import RelatedTools from "@/components/related-tools";
 import { ChevronLeft, Shield, Info, User } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -99,6 +100,7 @@ export default function PassportPhotoPage() {
           </div>
 
           <AdsPlaceholder format="horizontal" slot="passport-bottom-banner" />
+          <RelatedTools currentTool="passport" />
         </div>
       </main>
 

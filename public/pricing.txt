@@ -1,0 +1,17 @@
+# Pricing — FileFit
+
+FileFit is a 100% free web utility. 
+
+## Cost and Tiers
+- **Price:** $0.00
+- **Tiers:** None. All features are fully unlocked for all users.
+- **Subscriptions:** None.
+- **Credit Card Required:** No.
+- **Account / Login Required:** No.
+
+## Limitations
+- **Processing Limits:** Unlimited. Process as many files as your local browser memory can handle.
+- **File Size Limits:** Bound only by the user's local device RAM (since files are processed locally in the browser, not uploaded to a server).
+
+## Business Model
+FileFit relies on standard, non-intrusive display advertisements to support domain and hosting costs. Because all file processing happens locally on the user's device, server compute costs are minimal, allowing the tool to remain permanently free.

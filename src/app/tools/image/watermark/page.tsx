@@ -1,24 +1,24 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import ImageWorkspace from "@/components/image-workspace";
+import WatermarkWorkspace from "@/components/watermark-workspace";
 import RelatedTools from "@/components/related-tools";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Compress Image Online Free - Reduce Photo Size | FileFit",
-  description: "Free online image compressor. Reduce JPG, PNG, and WebP file sizes instantly in your browser without uploading to a server.",
-  alternates: { canonical: "/tools/image/compress" },
+  title: "Add Watermark to Image Online Free - Protect Photos | FileFit",
+  description: "Free online image watermarker. Add text or logo watermarks to your images securely in your browser without uploading.",
+  alternates: { canonical: "/tools/image/watermark" },
 };
 
-export default function CompressPage() {
+export default function WatermarkPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "FileFit Image Compressor",
+    "name": "FileFit Image Watermarker",
     "operatingSystem": "All",
     "applicationCategory": "UtilityApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-    "description": "Free browser-based utility tool to compress and reduce image file sizes client-side."
+    "description": "Free browser-based utility tool to add text or logo watermarks to images client-side."
   };
 
   return (
@@ -26,8 +26,8 @@ export default function CompressPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Header />
       <main className="flex-1 bg-white min-h-screen pb-20">
-        <ImageWorkspace defaultMode="compress" />
-        <RelatedTools currentTool="compress-image" />
+        <WatermarkWorkspace />
+        <RelatedTools currentTool="watermark" />
       </main>
       <Footer />
     </>
