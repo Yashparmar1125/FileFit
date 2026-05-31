@@ -321,7 +321,7 @@ export default function RelatedTools({
             <Link
               key={t.href}
               href={t.href}
-              className="group flex items-start gap-3 p-4 rounded-2xl border border-[#f0f0f0] hover:border-[#FF5C2E]/30 hover:shadow-md transition-all bg-white"
+              className="group flex items-start gap-3 p-4 rounded-2xl border border-[#0F0F0F] hover:border-[#0F0F0F] shadow-brutal shadow-brutal-hover bg-white"
             >
               {/* Icon */}
               <span className="shrink-0 w-11 h-11 flex items-center justify-center rounded-xl border border-[#eee] bg-[#fafafa] group-hover:border-[#FF5C2E]/20 transition-colors overflow-hidden">

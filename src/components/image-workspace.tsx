@@ -13,8 +13,10 @@ interface ImageWorkspaceProps {
   defaultTargetKb?: number;
 }
 
-const BTN_PRIMARY = "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
-const BTN_SUCCESS = "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
+const BTN_SUCCESS = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 const INPUT_BASE = "w-full px-3 py-2 rounded-xl text-sm text-[#0F0F0F] focus:outline-none transition-all";
 
 export default function ImageWorkspace({

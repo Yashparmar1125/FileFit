@@ -5,8 +5,8 @@ import Dropzone from "@/components/dropzone";
 import { ChevronLeft, Download, Eraser } from "lucide-react";
 import Link from "next/link";
 
-const BTN_PRIMARY =
-  "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 function colorDistance(r1: number, g1: number, b1: number, r2: number, g2: number, b2: number): number {
   return Math.sqrt((r1 - r2) ** 2 + (g1 - g2) ** 2 + (b1 - b2) ** 2);

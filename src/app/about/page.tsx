@@ -18,7 +18,7 @@ export default function AboutPage() {
       <Header />
 
       <main className="flex-1 bg-bone py-12 px-4">
-        <div className="max-w-3xl mx-auto bg-white rounded-2xl border border-bone-dark p-8 sm:p-12 space-y-8 shadow-sm">
+        <div className="max-w-3xl mx-auto bg-white rounded-2xl border-2 border-[#0F0F0F] p-8 sm:p-12 space-y-8 shadow-[6px_6px_0px_#F5F0E8]">
           
           <div className="text-center space-y-3">
             <div className="inline-flex p-3 rounded-2xl bg-brand-50 text-brand-500">

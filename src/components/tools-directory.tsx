@@ -1,0 +1,296 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Search, ArrowRight } from "lucide-react";
+
+interface ToolItem {
+  name: string;
+  description: string;
+  category: "image" | "signature" | "pdf" | "preset";
+  link: string;
+  badge?: string;
+  iconColor: string;
+  iconBg: string;
+}
+
+const TOOLS_LIST: ToolItem[] = [
+  // Image
+  { name: "Resize Image", description: "Adjust image width & height pixel dimensions in seconds.", category: "image", link: "/tools/image/resize", iconColor: "#3b82f6", iconBg: "#eff6ff" },
+  { name: "Compress Image", description: "Shrink image file size (under 20KB, 50KB, 100KB) with quality retention.", category: "image", link: "/tools/image/compress", iconColor: "#3b82f6", iconBg: "#eff6ff", badge: "Popular" },
+  { name: "Convert PNG / JPG", description: "Instantly convert between PNG and JPG formats client-side.", category: "image", link: "/tools/image/jpg-to-png", iconColor: "#3b82f6", iconBg: "#eff6ff" },
+  // Signature
+  { name: "Resize Signature", description: "Rescale scanned signature photos to meet entrance exam constraints.", category: "signature", link: "/tools/signature/resize", iconColor: "#8b5cf6", iconBg: "#f5f3ff" },
+  { name: "Signature Cleaner", description: "Remove dark gray shadows from signature scans, turning paper white or transparent.", category: "signature", link: "/tools/signature/crop", iconColor: "#8b5cf6", iconBg: "#f5f3ff", badge: "Smart" },
+  // PDF
+  { name: "Compress PDF", description: "Reduce PDF file size to under 100KB, 200KB or custom limits in the browser.", category: "pdf", link: "/tools/pdf/compress", iconColor: "#FF5C2E", iconBg: "#fff4f0", badge: "Advanced" },
+  { name: "Merge PDF", description: "Merge multiple PDF documents into a single compiled file securely.", category: "pdf", link: "/tools/pdf/merge", iconColor: "#FF5C2E", iconBg: "#fff4f0" },
+  { name: "Split PDF", description: "Extract specific page ranges from a PDF document into a new file.", category: "pdf", link: "/tools/pdf/split", iconColor: "#FF5C2E", iconBg: "#fff4f0" },
+  { name: "Image to PDF", description: "Convert photos or scanned images into a clean single PDF file.", category: "pdf", link: "/tools/pdf/image-to-pdf", iconColor: "#FF5C2E", iconBg: "#fff4f0" },
+  // Presets
+  { name: "SSC Resizer", description: "Format candidate photo (20–50KB) and signature (10–20KB) for SSC exams.", category: "preset", link: "/exams/ssc-cgl", iconColor: "#10b981", iconBg: "#ecfdf5" },
+  { name: "UPSC Formatter", description: "Format UPSC photo and signature to square aspect ratio (20–300KB).", category: "preset", link: "/exams/upsc-ias", iconColor: "#10b981", iconBg: "#ecfdf5" },
+  { name: "IBPS Banking Forms", description: "Format photo (20–50KB) and signature (10–20KB) for banking applications.", category: "preset", link: "/exams/ibps-po", iconColor: "#10b981", iconBg: "#ecfdf5" },
+  { name: "Passport Photo Maker", description: "Crop and scale photos to standard Indian passport sizes (3.5×4.5cm).", category: "preset", link: "/passport-photo", iconColor: "#10b981", iconBg: "#ecfdf5" },
+  { name: "PAN Card Formatter", description: "NSDL/UTI photo (2.5×3.5cm) and signature size formatting.", category: "preset", link: "/documents/pan-card-photo", iconColor: "#10b981", iconBg: "#ecfdf5" },
+  { name: "Visa Photo Resizer", description: "Adjust aspect ratios for USA Visa (2×2 inches), UK, and Schengen Visas.", category: "preset", link: "/documents/visa-usa", iconColor: "#10b981", iconBg: "#ecfdf5" },
+];
+
+const CATEGORIES = [
+  { key: "all", label: "All Tools" },
+  { key: "image", label: "Image" },
+  { key: "signature", label: "Signature" },
+  { key: "pdf", label: "PDF" },
+  { key: "preset", label: "Form Presets" },
+] as const;
+
+type Category = (typeof CATEGORIES)[number]["key"];
+
+function ToolIcon({ name }: { name: string }) {
+  switch (name) {
+    case "Resize Image":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="8" y="6" width="22" height="27" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="14" y="13" width="16" height="19" rx="3" fill="#FF5C2E"/>
+          <path d="M18 21h8M18 24.5h5" stroke="#0F0F0F" strokeWidth="1.6" strokeLinecap="round" opacity={0.35}/>
+          <path d="M20 19l2-2 2 2M20 27l2 2 2-2" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Compress Image":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="8" y="6" width="22" height="27" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="16" y="16" width="20" height="20" rx="4" fill="#FF5C2E"/>
+          <path d="M26 22l-3 3-3-3M26 28l-3-3-3 3" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Convert PNG / JPG":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="6" y="7" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="18" y="12" width="20" height="24" rx="4" fill="#FF5C2E"/>
+          <path d="M23 21h10M23 25h7" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" opacity={0.5}/>
+          <path d="M17 21.5l3 0M17.5 20l2.5 1.5-2.5 1.5" stroke="#0F0F0F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity={0.4}/>
+        </svg>
+      );
+    case "Resize Signature":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="6" y="10" width="26" height="18" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <path d="M10 21c2-4 3.5-6 6-6s2.5 4 5 4 3.5-3 6-3" stroke="#888" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <rect x="22" y="22" width="16" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M26 30l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Signature Cleaner":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="6" y="10" width="26" height="18" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <path d="M10 21c2-4 3.5-6 6-6s2.5 4 5 4 3.5-3 6-3" stroke="#888" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <rect x="22" y="22" width="16" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M26 30l2 2 2-2M26 34l2-2 2 2" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" opacity={0.9}/>
+          <rect x="28" y="27" width="4" height="1.5" rx={0.75} fill="#fff" opacity={0.6}/>
+        </svg>
+      );
+    case "Compress PDF":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="9" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <path d="M14 13h10M14 17h10M14 21h6" stroke="#aaa" strokeWidth="1.5" strokeLinecap="round"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M27 28v5M24.5 31l2.5 2.5 2.5-2.5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Merge PDF":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="5" y="8" width="18" height="23" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5" opacity={0.6}/>
+          <rect x="12" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <path d="M17 13h10M17 17h10M17 21h6" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round"/>
+          <rect x="20" y="22" width="16" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M24 30l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Split PDF":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="9" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <path d="M14 13h10M14 17h10M14 21h6" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round"/>
+          <line x1="9" y1="18" x2="29" y2="18" stroke="#FF5C2E" strokeWidth="1.5" strokeDasharray="3 2"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M22 30l5-4M22 30l5 4" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "Image to PDF":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="7" y="6" width="20" height="22" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="8" y="8" width="16" height="11" rx="2" fill="#ccc" opacity={0.5}/>
+          <path d="M11 22l3 3 3-3" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M22 30l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "SSC Resizer":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="9" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="14" y="3" width="10" height="6" rx="2" fill="#F5F0E8" stroke="#ccc" strokeWidth="1"/>
+          <path d="M13 16h12M13 20h9M13 24h6" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <text x="27" y="33" textAnchor="middle" fontSize="7" fontWeight="800" fill="#fff" fontFamily="'Courier New',monospace">SSC</text>
+        </svg>
+      );
+    case "UPSC Formatter":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="9" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <circle cx="19" cy="16" r="5" fill="#ddd"/>
+          <path d="M13 25c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <text x="27" y="33" textAnchor="middle" fontSize="6" fontWeight="800" fill="#fff" fontFamily="'Courier New',monospace">UPSC</text>
+        </svg>
+      );
+    case "IBPS Banking Forms":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="9" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="14" y="3" width="10" height="6" rx="2" fill="#F5F0E8" stroke="#ccc" strokeWidth="1"/>
+          <rect x="13" y="13" width="6" height="8" rx="1.5" fill="#ddd"/>
+          <path d="M21 15h6M21 18h4M13 24h12" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <text x="27" y="33" textAnchor="middle" fontSize="6.5" fontWeight="800" fill="#fff" fontFamily="'Courier New',monospace">IBPS</text>
+        </svg>
+      );
+    case "Passport Photo Maker":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="9" y="5" width="20" height="26" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <circle cx="19" cy="15" r="5" fill="#ddd"/>
+          <path d="M12 27c0-3.9 3.1-7 7-7s7 3.1 7 7" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round" fill="none"/>
+          <rect x="18" y="22" width="18" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M22 30l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    case "PAN Card Formatter":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="6" y="9" width="26" height="18" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <rect x="10" y="12" width="7" height="9" rx="1.5" fill="#ddd"/>
+          <path d="M20 14h8M20 17h6M20 20h7" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round"/>
+          <rect x="22" y="22" width="16" height="16" rx="4" fill="#FF5C2E"/>
+          <text x="30" y="33" textAnchor="middle" fontSize="6.5" fontWeight="800" fill="#fff" fontFamily="'Courier New',monospace">PAN</text>
+        </svg>
+      );
+    case "Visa Photo Resizer":
+      return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+          <rect x="6" y="9" width="26" height="18" rx="4" fill="#F5F0E8" stroke="#E8E2D8" strokeWidth="0.5"/>
+          <circle cx="15" cy="17" r="4.5" fill="#ddd"/>
+          <path d="M21 13h9M21 17h7M21 21h8" stroke="#aaa" strokeWidth="1.4" strokeLinecap="round"/>
+          <rect x="22" y="22" width="16" height="16" rx="4" fill="#FF5C2E"/>
+          <path d="M26 30l2.5 2.5 5-5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+export default function ToolsDirectory() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState<Category>("all");
+
+  const filteredTools = TOOLS_LIST.filter((tool) => {
+    const q = searchQuery.toLowerCase();
+    const matchSearch = tool.name.toLowerCase().includes(q) || tool.description.toLowerCase().includes(q);
+    const matchCat = activeCategory === "all" || tool.category === activeCategory;
+    return matchSearch && matchCat;
+  });
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Search + tabs */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        <div className="relative w-full md:max-w-sm">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#aaa] pointer-events-none" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search tools…"
+            className="w-full pl-9 pr-4 py-2.5 rounded-xl border border-bone-dark bg-white focus:outline-none text-sm text-[#0F0F0F] placeholder-[#aaa] transition-all"
+            style={{ fontFamily: "var(--font-jakarta), system-ui, sans-serif" }}
+            onFocus={e => { e.currentTarget.style.borderColor = "#FF5C2E"; e.currentTarget.style.boxShadow = "0 0 0 3px rgba(255,92,46,0.1)"; }}
+            onBlur={e => { e.currentTarget.style.borderColor = "var(--color-bone-dark)"; e.currentTarget.style.boxShadow = "none"; }}
+          />
+        </div>
+
+        {/* Category tabs */}
+        <div className="flex gap-1 p-1 rounded-xl bg-bone border border-bone-dark overflow-x-auto shrink-0 w-full md:w-auto">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setActiveCategory(cat.key)}
+              className="px-4 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition-all"
+              style={{
+                fontFamily: "var(--font-jakarta), system-ui, sans-serif",
+                background: activeCategory === cat.key ? "#ffffff" : "transparent",
+                color: activeCategory === cat.key ? "#FF5C2E" : "#888",
+                boxShadow: activeCategory === cat.key ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
+                border: activeCategory === cat.key ? "1px solid var(--color-bone-dark)" : "1px solid transparent",
+              }}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Tool cards grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 animate-stagger">
+        {filteredTools.map((tool) => {
+          return (
+            <Link key={tool.link} href={tool.link} className="tool-card p-5 flex flex-col gap-4 group shadow-brutal shadow-brutal-hover">
+              <div className="flex items-start justify-between">
+                <div className="transition-transform group-hover:scale-105">
+                  <ToolIcon name={tool.name} />
+                </div>
+                {tool.badge && (
+                  <span
+                    className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border"
+                    style={{ background: "#fff4f0", color: "#FF5C2E", borderColor: "#ffd0c0" }}
+                  >
+                    {tool.badge}
+                  </span>
+                )}
+              </div>
+
+              <div>
+                <h3
+                  className="text-[#0F0F0F] text-sm font-semibold mb-1 group-hover:text-[#FF5C2E] transition-colors"
+                  style={{ fontFamily: "var(--font-jakarta), system-ui, sans-serif" }}
+                >
+                  {tool.name}
+                </h3>
+                <p className="text-[#888] text-xs leading-relaxed">{tool.description}</p>
+              </div>
+
+              <div className="flex items-center gap-1 text-[11px] font-semibold text-[#aaa] group-hover:text-[#FF5C2E] transition-colors mt-auto">
+                Use Tool
+                <ArrowRight className="h-3 w-3 group-hover:translate-x-0.5 transition-transform" />
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+
+      {filteredTools.length === 0 && (
+        <div className="text-center py-16">
+          <p className="text-[#aaa] text-sm">No tools found. Try a different search.</p>
+        </div>
+      )}
+    </section>
+  );
+}

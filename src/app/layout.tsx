@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -114,11 +115,12 @@ export default function RootLayout({
         style={{ fontFamily: "var(--font-jakarta), system-ui, sans-serif" }}
         suppressHydrationWarning
       >
+        <NextTopLoader color="#FF5C2E" height={3} showSpinner={false} />
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID || "ca-pub-XXXXXXXXXXXXXXX"}`}
           crossOrigin="anonymous"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         {children}
         <Analytics />

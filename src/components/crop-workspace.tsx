@@ -5,8 +5,8 @@ import Dropzone from "@/components/dropzone";
 import { ChevronLeft, Crop, Download, RefreshCw, RotateCcw } from "lucide-react";
 import Link from "next/link";
 
-const BTN_PRIMARY =
-  "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 const ASPECT_PRESETS = [
   { label: "Free", value: null },

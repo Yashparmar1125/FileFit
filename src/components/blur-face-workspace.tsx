@@ -5,8 +5,8 @@ import Dropzone from "@/components/dropzone";
 import { ChevronLeft, Download, EyeOff, RotateCcw, Trash2 } from "lucide-react";
 import Link from "next/link";
 
-const BTN_PRIMARY =
-  "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 interface BlurRegion {
   x: number;

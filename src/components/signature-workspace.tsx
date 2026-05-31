@@ -12,7 +12,8 @@ interface SignatureWorkspaceProps {
   defaultTargetKb?: number;
 }
 
-const BTN_PRIMARY = "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 export default function SignatureWorkspace({ defaultMode = "compress", defaultTargetKb = 10 }: SignatureWorkspaceProps) {
   const [sourceFile, setSourceFile] = useState<File | null>(null);
@@ -238,7 +239,7 @@ export default function SignatureWorkspace({ defaultMode = "compress", defaultTa
                 className="w-10 h-6 rounded-full p-1 transition-all flex items-center"
                 style={{ background: autoCrop ? "#FF5C2E" : "#e8e2d8", justifyContent: autoCrop ? "flex-end" : "flex-start" }}
               >
-                <div className="w-4 h-4 bg-white rounded-full shadow-sm" />
+                <div className="w-4 h-4 bg-white rounded-full shadow-brutal" />
               </button>
             </div>
 

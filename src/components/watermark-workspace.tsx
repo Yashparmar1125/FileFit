@@ -5,8 +5,8 @@ import Dropzone from "@/components/dropzone";
 import { ChevronLeft, Download, Stamp } from "lucide-react";
 import Link from "next/link";
 
-const BTN_PRIMARY =
-  "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 type Position =
   | "top-left" | "top-center" | "top-right"
@@ -175,7 +175,7 @@ export default function WatermarkWorkspace() {
               <div className="w-full flex items-center justify-center rounded-xl overflow-hidden" style={{ background: "#F5F0E8", padding: 16 }}>
                 <canvas
                   ref={canvasRef}
-                  className="max-w-full rounded-xl shadow-sm"
+                  className="max-w-full rounded-xl shadow-brutal"
                   style={{ maxHeight: 400, objectFit: "contain" }}
                 />
               </div>

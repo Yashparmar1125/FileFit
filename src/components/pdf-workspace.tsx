@@ -12,7 +12,8 @@ interface PdfWorkspaceProps {
   defaultTargetKb?: number;
 }
 
-const BTN_PRIMARY = "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 export default function PdfWorkspace({ defaultMode = "compress", defaultTargetKb = 100 }: PdfWorkspaceProps) {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);

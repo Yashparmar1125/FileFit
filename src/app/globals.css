@@ -59,11 +59,12 @@ body {
 
 /* ── Layout utilities ──────────────────────────────────────── */
 
-/* White card with subtle border */
+/* White card with sharp brutalist border */
 .panel {
   background: #ffffff;
-  border: 1px solid #e8e2d8;
-  border-radius: 16px;
+  border: 1.5px solid #0F0F0F;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0px #F5F0E8;
 }
 
 /* Bone-tinted section background */
@@ -79,15 +80,19 @@ body {
 /* ── Tool card ─────────────────────────────────────────────── */
 .tool-card {
   background: #ffffff;
-  border: 1px solid #e8e2d8;
-  border-radius: 16px;
-  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+  border: 1.5px solid #0F0F0F;
+  border-radius: 12px;
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .tool-card:hover {
-  border-color: #FF5C2E;
-  box-shadow: 0 4px 20px rgba(255, 92, 46, 0.12);
-  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px #0F0F0F;
+  transform: translate(-2px, -2px);
+}
+
+.tool-card:active {
+  box-shadow: 0px 0px 0px #0F0F0F;
+  transform: translate(2px, 2px);
 }
 
 /* ── Brand gradient text ───────────────────────────────────── */
@@ -100,20 +105,23 @@ body {
 
 /* ── Dropzone ──────────────────────────────────────────────── */
 .dropzone-idle {
-  border: 2px dashed #C8C2B8;
+  border: 2px dashed #0F0F0F;
   background: #faf8f5;
   transition: all 0.18s ease;
+  border-radius: 12px;
 }
 
 .dropzone-idle:hover {
   border-color: #FF5C2E;
   background: #fff4f0;
+  box-shadow: 4px 4px 0px #0F0F0F;
+  transform: translate(-2px, -2px);
 }
 
 .dropzone-active {
   border-color: #FF5C2E !important;
   background: #fff4f0 !important;
-  transform: scale(1.01);
+  box-shadow: 4px 4px 0px #0F0F0F;
 }
 
 /* ── Scrollbar ─────────────────────────────────────────────── */
@@ -168,4 +176,78 @@ input[type="range"]::-webkit-slider-runnable-track {
   height: 4px;
   border-radius: 2px;
   background: #e8e2d8;
+}
+
+/* ── Neo-Brutalist & Refined UI Utilities ──────────────────── */
+
+/* Sharp tactile shadows */
+.shadow-brutal {
+  box-shadow: 3px 3px 0px #0F0F0F;
+  border: 1.5px solid #0F0F0F;
+}
+
+.shadow-brutal:active {
+  box-shadow: 0px 0px 0px #0F0F0F;
+  transform: translate(3px, 3px);
+}
+
+.shadow-brutal-hover {
+  transition: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.shadow-brutal-hover:hover {
+  box-shadow: 4px 4px 0px #0F0F0F;
+  border-color: #0F0F0F;
+  transform: translate(-2px, -2px);
+}
+
+.shadow-brutal-hover:active {
+  box-shadow: 0px 0px 0px #0F0F0F;
+  transform: translate(2px, 2px);
+}
+
+/* Engineering Canvas Grid */
+.bg-grid-pattern {
+  background-image: 
+    radial-gradient(#d4cec4 1px, transparent 1px),
+    radial-gradient(#d4cec4 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Staggered entry animation */
+@keyframes stagger-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stagger > * {
+  opacity: 0;
+  animation: stagger-fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.animate-stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.animate-stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.animate-stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.animate-stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.animate-stagger > *:nth-child(6) { animation-delay: 0.3s; }
+.animate-stagger > *:nth-child(7) { animation-delay: 0.35s; }
+.animate-stagger > *:nth-child(8) { animation-delay: 0.4s; }
+.animate-stagger > *:nth-child(9) { animation-delay: 0.45s; }
+.animate-stagger > *:nth-child(10) { animation-delay: 0.5s; }
+.animate-stagger > *:nth-child(11) { animation-delay: 0.55s; }
+.animate-stagger > *:nth-child(12) { animation-delay: 0.6s; }
+
+/* Subtle glassmorphism */
+.glass-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }

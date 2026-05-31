@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {TRUST_ITEMS.map(({ icon: Icon, title, desc }) => (
             <div key={title} className="flex items-start gap-3">
-              <div className="p-2 bg-bone rounded-lg text-[#FF5C2E] shrink-0 shadow-sm border border-bone-dark">
+              <div className="p-2 bg-bone rounded-lg text-[#FF5C2E] shrink-0 shadow-brutal border border-[#0F0F0F]">
                 <Icon className="h-4 w-4" />
               </div>
               <div>

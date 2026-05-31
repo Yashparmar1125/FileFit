@@ -350,7 +350,7 @@ function MegaPanel({ close }: { close: () => void }) {
                   <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: g.accent }} />
                   {g.label}
                 </p>
-                <ul className="space-y-0.5">
+                <ul className="space-y-0.5 animate-stagger">
                   {g.tools.map((t) => <ToolRow key={t.href} tool={t} close={close} />)}
                 </ul>
               </div>
@@ -369,7 +369,7 @@ function MegaPanel({ close }: { close: () => void }) {
                 <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: g.accent }} />
                 {g.label}
               </p>
-              <ul className="space-y-0.5">
+              <ul className="space-y-0.5 animate-stagger">
                 {g.tools.map((t) => <ToolRow key={t.href} tool={t} close={close} />)}
               </ul>
             </div>
@@ -471,7 +471,7 @@ export default function Header() {
     <>
       <header
         ref={headerRef}
-        className="sticky top-0 z-50 bg-white border-b border-[#e9ecef]"
+        className="sticky top-0 z-50 glass-header border-b border-[#0F0F0F]"
         style={{ boxShadow: "0 1px 4px rgba(0,0,0,0.06)" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -527,7 +527,7 @@ export default function Header() {
             {/* CTA */}
             <Link
               href="/tools/image/compress"
-              className="hidden md:flex shrink-0 h-9 items-center px-4 rounded-lg text-[13px] font-bold text-white bg-[#FF5C2E] hover:bg-[#E04820] transition-colors"
+              className="hidden md:flex shrink-0 h-9 items-center px-4 rounded-lg text-[13px] font-bold text-white bg-[#FF5C2E] shadow-brutal shadow-brutal-hover"
             >
               Try Free →
             </Link>

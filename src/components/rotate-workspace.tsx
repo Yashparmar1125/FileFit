@@ -5,8 +5,8 @@ import Dropzone from "@/components/dropzone";
 import { ChevronLeft, Download, FlipHorizontal, FlipVertical, RotateCcw, RotateCw } from "lucide-react";
 import Link from "next/link";
 
-const BTN_PRIMARY =
-  "px-5 py-2.5 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2";
+const BTN_PRIMARY = 
+  "px-5 py-2.5 text-white text-sm font-bold rounded-xl flex items-center gap-2 shadow-brutal shadow-brutal-hover";
 
 export default function RotateWorkspace() {
   const [file, setFile] = useState<File | null>(null);
@@ -145,7 +145,7 @@ export default function RotateWorkspace() {
               <div className="w-full flex items-center justify-center rounded-xl overflow-hidden" style={{ background: "#F5F0E8", minHeight: 200, padding: 16 }}>
                 <canvas
                   ref={canvasRef}
-                  className="max-w-full max-h-[420px] object-contain rounded-xl shadow-sm"
+                  className="max-w-full max-h-[420px] object-contain rounded-xl shadow-brutal"
                   style={{ transition: "all 0.2s ease" }}
                 />
               </div>
