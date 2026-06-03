@@ -1,9 +1,6 @@
 import { MetadataRoute } from "next";
 import EXAMS_DATA from "@/data/exam-requirements.json";
 import DOCUMENTS_DATA from "@/data/document-requirements.json";
-import PHOTO_SIZES_DATA from "@/data/photo-sizes.json";
-import SIG_SIZES_DATA from "@/data/signature-sizes.json";
-import PDF_SIZES_DATA from "@/data/pdf-sizes.json";
 
 const DOMAIN = "https://filefit.online";
 
@@ -48,20 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addRoute(`/documents/${doc.slug}`, 0.9);
   });
 
-  // 5. Photo Size pages
-  PHOTO_SIZES_DATA.forEach((item) => {
-    addRoute(`/photo-size/${item.size}`, 0.7);
-  });
 
-  // 6. Signature Size pages
-  SIG_SIZES_DATA.forEach((item) => {
-    addRoute(`/signature-size/${item.size}`, 0.6);
-  });
-
-  // 7. PDF Size pages
-  PDF_SIZES_DATA.forEach((item) => {
-    addRoute(`/pdf-size/${item.size}`, 0.7);
-  });
 
   return routes;
 }

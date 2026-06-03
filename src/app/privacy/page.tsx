@@ -1,6 +1,13 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { ShieldCheck, Lock, EyeOff, ServerOff } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | FileFit",
+  description: "Learn how FileFit protects your documents and data using client-side processing.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPage() {
   return (

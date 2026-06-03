@@ -17,8 +17,9 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
   const formattedSize = size.toUpperCase();
   return {
     title: `Compress PDF to Under ${formattedSize} Online Free | FileFit`,
-    description: `Shrink and optimize your PDF files to strictly under ${formattedSize} in your browser. Maintain document layout and readability.`,
+    description: `Compress and resize PDF documents to strictly under ${formattedSize} in your browser. Fast, free, and secure processing.`,
     alternates: { canonical: `/pdf-size/${size}` },
+    robots: { index: false },
   };
 }
 

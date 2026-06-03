@@ -53,7 +53,6 @@ export const metadata: Metadata = {
     apple: "/filefit-icon-192.png",
     shortcut: "/favicon.ico",
   },
-  alternates: { canonical: "https://filefit.online" },
 };
 
 /* JSON-LD structured data */

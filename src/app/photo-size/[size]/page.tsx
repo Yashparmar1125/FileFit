@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
     title: `Compress Image to Under ${formattedSize} Online Free | FileFit`,
     description: `Easily resize and compress your photo or image to exactly under ${formattedSize} in your browser. Fast, free, and secure processing.`,
     alternates: { canonical: `/photo-size/${size}` },
+    robots: { index: false },
   };
 }
 

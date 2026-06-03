@@ -16,9 +16,10 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
   const { size } = await params;
   const formattedSize = size.toUpperCase();
   return {
-    title: `Compress Signature to Under ${formattedSize} Online | FileFit`,
-    description: `Resize, crop, and compress your signature scan to strictly under ${formattedSize} in your browser. Fast, free background cleaning tool.`,
+    title: `Compress Signature to Under ${formattedSize} Online Free | FileFit`,
+    description: `Easily resize and compress your signature scan to exactly under ${formattedSize} in your browser. Fast, free, and secure processing.`,
     alternates: { canonical: `/signature-size/${size}` },
+    robots: { index: false },
   };
 }
 

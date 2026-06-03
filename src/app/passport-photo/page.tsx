@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: "Online Passport Photo Maker & Resizer Free | FileFit",
   description:
     "Crop, resize, and compress photo to standard Indian passport photo dimensions (3.5 x 4.5 cm) or US size (2x2 inches) online in seconds.",
+  alternates: { canonical: "/passport-photo" },
 };
 
 export default function PassportPhotoPage() {
