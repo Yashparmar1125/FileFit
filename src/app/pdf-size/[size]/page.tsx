@@ -132,41 +132,77 @@ export default async function PdfSizePage({ params }: RouteParams) {
             </div>
           </div>
 
-          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-gray-900 text-xl sm:text-2xl font-bold">Why compress PDF documents to under {formattedSize}?</h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Many online application systems, especially government forms (like UPSC, Income Tax portals, and bank websites), impose strict limits on PDF uploads. Resumes, marksheets, and certificate scans are often restricted to stay under {formattedSize}.
-                Our local PDF compressor scales down the size under {formattedSize} while keeping the text completely readable.
+          {/* Comprehensive SEO Content Section for AdSense Value */}
+          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-10">
+            {/* Guide Section 1 */}
+            <div className="space-y-4">
+              <h2 className="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight">The Complete Guide to Compressing PDF Documents to {formattedSize}</h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Whether you are submitting an online job application, uploading a resume, filing taxes on a government portal, or sending an invoice, strict file size limits are common. Many of these portals enforce a maximum upload size of exactly <strong>{formattedSize}</strong> or less to save server space and bandwidth.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Our free {formattedSize} PDF compressor operates directly in your browser. It analyzes the internal structure of your PDF (like embedded images, vector paths, and fonts) and selectively compresses high-resolution elements so that your document is safely resized to fit within the {formattedSize} constraint—all while keeping your text sharp and legible.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-gray-900 text-lg font-bold flex items-center gap-2">
-                <HelpCircle className="h-5 w-5 text-brand-500" />
-                Frequently Asked Questions
+            {/* Guide Section 2 */}
+            <div className="bg-[#fafafa] border border-[#e9ecef] p-6 sm:p-8 rounded-2xl space-y-5">
+              <h3 className="text-gray-900 text-xl font-bold">Step-by-Step: How to Shrink Your PDF to {formattedSize}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">1. Select Your PDF</h4>
+                  <p className="text-sm text-gray-600">Drag and drop your PDF document (e.g., resume, ID scan, marksheet) into the workspace. It will load instantly.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">2. Intelligent Compression</h4>
+                  <p className="text-sm text-gray-600">Our engine automatically runs a compression algorithm to target the {formattedSize} file size limit without touching vector text.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">3. Verify the Quality</h4>
+                  <p className="text-sm text-gray-600">Review the output in the built-in PDF viewer. Ensure that your text and crucial images are still perfectly readable.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">4. Download Securely</h4>
+                  <p className="text-sm text-gray-600">Click to download. Because everything happened in your browser, the file is saved directly without hitting any external servers!</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Expanded FAQ */}
+            <div className="space-y-6">
+              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold flex items-center gap-2">
+                <HelpCircle className="h-6 w-6 text-brand-500" />
+                Frequently Asked Questions about {formattedSize} PDFs
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {[
                   {
                     q: `How can I compress a PDF to under ${formattedSize} without losing text clarity?`,
-                    a: "FileFit's engine targets high-resolution image objects within the PDF while leaving vector text structures intact. If the file is still too large, it dynamically scales the resolution to ensure it meets the target limit.",
+                    a: `FileFit's intelligent engine works by targeting the embedded raster images (like scanned photos or logos) within the PDF, while leaving vector text structures entirely intact. If the file is still above ${formattedSize}, it dynamically scales the image resolution down iteratively to ensure it meets the target limit without making the actual words blurry.`,
                   },
                   {
-                    q: "Are my confidential PDF documents safe from being leaked?",
-                    a: "Absolutely. Processing is handled locally in JavaScript inside your browser sandbox. Unlike other sites, your PDF files are never uploaded to our servers.",
+                    q: "Are my confidential PDF documents (like bank statements) safe from being leaked?",
+                    a: "Absolutely. Security is the core foundation of FileFit. The entire PDF compression process is handled locally via JavaScript inside your browser's secure sandbox. Unlike traditional online tools, your highly confidential PDF files are never uploaded to our servers, meaning there is zero risk of data interception.",
                   },
+                  {
+                    q: `Will compressing my PDF to ${formattedSize} change its page layout or formatting?`,
+                    a: `No. The layout, margins, and structural formatting of your PDF will remain exactly the same. The compression process focuses entirely on reducing the file size of the embedded assets (images, fonts, and metadata) to hit the ${formattedSize} limit, not the page structure.`,
+                  },
+                  {
+                    q: "Why is my PDF file so large to begin with?",
+                    a: "PDFs usually become excessively large when they contain unoptimized, high-resolution scanned images (like when you scan a document using a mobile app) or when fonts are embedded multiple times. Our tool strips out unnecessary data and compresses those images to a web-friendly size.",
+                  }
                 ].map(({ q, a }) => (
-                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-[#fafafa] space-y-1.5">
-                    <h4 className="text-gray-800 text-sm font-semibold">{q}</h4>
-                    <p className="text-gray-500 text-xs leading-relaxed">{a}</p>
+                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-white shadow-sm space-y-2 hover:shadow-md transition-shadow">
+                    <h4 className="text-gray-900 text-base font-semibold">{q}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-3">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Related PDF Sizes</span>
+            <div className="space-y-3 pt-6 border-t border-[#e9ecef]">
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Explore Related PDF Sizes</span>
               <div className="flex flex-wrap gap-2">
                 {PDF_SIZES_DATA.filter(item => item.size !== size).map((item) => (
                   <Link

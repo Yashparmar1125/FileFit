@@ -137,6 +137,10 @@ export default function Footer() {
                 Privacy
               </Link>
               <span>·</span>
+              <Link href="/terms" className="hover:text-[#FF5C2E] transition-colors">
+                Terms
+              </Link>
+              <span>·</span>
               <Link
                 href="https://github.com/Yashparmar1125/FileFit"
                 target="_blank"

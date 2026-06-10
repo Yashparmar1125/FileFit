@@ -134,42 +134,77 @@ export default async function PhotoSizePage({ params }: RouteParams) {
             </div>
           </div>
 
-          {/* SEO section */}
-          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-gray-900 text-xl sm:text-2xl font-bold">Why compress images to under {formattedSize}?</h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Many online application portals, including government recruitments (SSC, UPSC, State PSCs), banking boards, and academic admission setups, restrict the maximum upload size of candidate photographs to {formattedSize}.
-                Our tool dynamically scales down resolution density and JPEG macroblock values so that your image is resized to under {formattedSize} while remaining clean, crisp, and readable.
+          {/* Comprehensive SEO Content Section for AdSense Value */}
+          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-10">
+            {/* Guide Section 1 */}
+            <div className="space-y-4">
+              <h2 className="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight">The Ultimate Guide to Compressing Images to {formattedSize}</h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                If you are applying for a government exam (like SSC, UPSC, or state-level boards), submitting a college admission form, or filling out a visa application online, you have likely encountered strict file size limitations. Many of these portals have legacy systems that restrict the maximum upload size of candidate photographs to exactly <strong>{formattedSize}</strong> or less.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Our free {formattedSize} photo compressor is designed specifically to solve this problem. It dynamically scales down the resolution density and adjusts JPEG macroblock values so that your image is perfectly resized to fit within the {formattedSize} constraint, while ensuring your face remains clean, crisp, and fully readable for the reviewers.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-gray-900 text-lg font-bold flex items-center gap-2">
-                <HelpCircle className="h-5 w-5 text-brand-500" />
-                Frequently Asked Questions
+            {/* Guide Section 2 */}
+            <div className="bg-[#fafafa] border border-[#e9ecef] p-6 sm:p-8 rounded-2xl space-y-5">
+              <h3 className="text-gray-900 text-xl font-bold">Step-by-Step: How to Resize Your Photo to {formattedSize}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">1. Select Your Image</h4>
+                  <p className="text-sm text-gray-600">Click the upload area or simply drag and drop your source photograph (JPG, PNG, or WebP). Make sure the lighting on your face is clear.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">2. Let the Engine Work</h4>
+                  <p className="text-sm text-gray-600">Our client-side WebAssembly engine will automatically calculate the best compression ratio to hit the {formattedSize} target without destroying quality.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">3. Preview the Result</h4>
+                  <p className="text-sm text-gray-600">Check the preview to ensure your facial features are still recognizable. You can adjust the quality slider manually if needed.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">4. Download Securely</h4>
+                  <p className="text-sm text-gray-600">Click download. The newly compressed {formattedSize} file is saved directly to your device. No server uploads are ever involved!</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Expanded FAQ */}
+            <div className="space-y-6">
+              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold flex items-center gap-2">
+                <HelpCircle className="h-6 w-6 text-brand-500" />
+                Frequently Asked Questions about {formattedSize} Compression
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {[
                   {
-                    q: `Will my image quality decrease when compressing to ${formattedSize}?`,
-                    a: `FileFit utilizes a smart dynamic binary search algorithm on the HTML5 Canvas API. It optimizes the resolution scale and JPEG compression parameters iteratively to match the target ${formattedSize} threshold while preserving maximum visual clarity and contrast.`,
+                    q: `Will my image quality decrease drastically when compressing to ${formattedSize}?`,
+                    a: `While reducing a file size to ${formattedSize} requires removing some image data, FileFit utilizes a smart dynamic binary search algorithm on the HTML5 Canvas API. It optimizes the resolution scale iteratively. This means it only compresses exactly as much as needed to hit the ${formattedSize} threshold, preserving maximum visual clarity and preventing the image from looking "pixelated" or "blocky."`,
                   },
                   {
-                    q: "Is my uploaded photograph safe and secure?",
-                    a: "Yes, completely. Unlike other online image resizers that upload files to cloud servers, FileFit operates entirely client-side using JavaScript. Your files never cross the network and stay 100% private on your machine.",
+                    q: "Is my uploaded photograph safe from identity theft?",
+                    a: "Absolutely. Security is our primary feature. Unlike other online image resizers that upload your sensitive personal photos to remote cloud servers (where they might be stored or leaked), FileFit operates 100% client-side. The processing happens entirely within your web browser's local memory. Your files never cross the internet.",
                   },
+                  {
+                    q: `What if my image is already smaller than ${formattedSize}?`,
+                    a: `If you upload an image that is already below the ${formattedSize} limit, our tool will notify you. We will not compress it further unnecessarily, preserving its original quality. You can simply download it as-is or use our crop tool to adjust the dimensions without worrying about the file size.`,
+                  },
+                  {
+                    q: "Can I use this tool on my mobile phone?",
+                    a: "Yes! Our compression engine is highly optimized and runs perfectly on modern mobile browsers (Chrome, Safari, Firefox). You can take a selfie or a photo of your physical passport photo with your phone's camera, upload it directly here, and shrink it to the required size in seconds.",
+                  }
                 ].map(({ q, a }) => (
-                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-[#fafafa] space-y-1.5">
-                    <h4 className="text-gray-800 text-sm font-semibold">{q}</h4>
-                    <p className="text-gray-500 text-xs leading-relaxed">{a}</p>
+                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-white shadow-sm space-y-2 hover:shadow-md transition-shadow">
+                    <h4 className="text-gray-900 text-base font-semibold">{q}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-3">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Related Photo Sizes</span>
+            <div className="space-y-3 pt-6 border-t border-[#e9ecef]">
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Explore Related Target Sizes</span>
               <div className="flex flex-wrap gap-2">
                 {PHOTO_SIZES_DATA.filter(item => item.size !== size).slice(0, 10).map((item) => (
                   <Link

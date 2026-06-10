@@ -174,43 +174,78 @@ export default async function ExamPage({ params }: RouteParams) {
             </div>
           </div>
 
-          {/* FAQs */}
-          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-gray-900 text-xl sm:text-2xl font-bold">About {exam.name} Form Upload Requirements</h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Applying for competitive exams in India requires candidates to upload scanned files that strictly match specified resolution boundaries and file weight limits.
-                If the file sizes do not fit within the range (usually 20KB–50KB for photos, and 10KB–20KB for signatures), the online form will reject the upload.
-                FileFit pre-populates these constraints so you can crop your signature scan, whiten paper backgrounds, resize your face portrait, and generate compliant files in under 10 seconds.
+          {/* Comprehensive SEO Content Section for AdSense Value */}
+          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-10">
+            {/* Guide Section 1 */}
+            <div className="space-y-4">
+              <h2 className="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight">Complete Guide to {exam.name} Form Upload Requirements</h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Applying for competitive exams like {exam.name} requires candidates to upload scanned files (such as passport photos, thumb impressions, and signatures) that strictly match specified resolution boundaries and file weight limits.
+                If the file sizes do not fit within the very narrow range, the online application form will outright reject the upload.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Using generic image resizers often leads to blurry photos or signatures that fail to meet these specific pixel dimension rules. FileFit pre-populates the exact official constraints so you can crop your signature scan, whiten paper backgrounds, resize your face portrait, and generate perfectly compliant files in seconds without any technical hassle.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-gray-900 text-lg font-bold flex items-center gap-2">
-                <HelpCircle className="h-5 w-5 text-brand-500" />
+            {/* Guide Section 2 */}
+            <div className="bg-[#fafafa] border border-[#e9ecef] p-6 sm:p-8 rounded-2xl space-y-5">
+              <h3 className="text-gray-900 text-xl font-bold">Step-by-Step: Formatting Files for {exam.name}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">1. Check Requirements</h4>
+                  <p className="text-sm text-gray-600">Review the target constraints loaded above. Ensure your source image has a light background (for photos) or black/blue ink (for signatures).</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">2. Upload & Crop</h4>
+                  <p className="text-sm text-gray-600">Upload your image into the workspace. The crop tool is automatically locked to the required aspect ratio for {exam.name}.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">3. Clean Signatures</h4>
+                  <p className="text-sm text-gray-600">If processing a signature, use the threshold slider to remove dark shadows and create a pure white background.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">4. Download</h4>
+                  <p className="text-sm text-gray-600">The file is processed instantly and downloaded entirely offline, ensuring maximum privacy for your personal identity details.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Expanded FAQ */}
+            <div className="space-y-6">
+              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold flex items-center gap-2">
+                <HelpCircle className="h-6 w-6 text-brand-500" />
                 Frequently Asked Questions
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {[
                   {
-                    q: `What are the exact photo and signature dimensions for ${exam.name}?`,
-                    a: `Photograph: ${exam.photoWidth} × ${exam.photoHeight} px (${exam.photoMinKb}–${exam.photoMaxKb} KB). Signature: ${exam.sigWidth} × ${exam.sigHeight} px (${exam.sigMinKb}–${exam.sigMaxKb} KB).`,
+                    q: `What are the exact photo and signature dimensions required for the ${exam.name} form?`,
+                    a: `The official requirements state: Photograph dimensions must be strictly ${exam.photoWidth} × ${exam.photoHeight} px, with a file size between ${exam.photoMinKb}KB and ${exam.photoMaxKb}KB. The scanned Signature dimensions must be ${exam.sigWidth} × ${exam.sigHeight} px, with a file size between ${exam.sigMinKb}KB and ${exam.sigMaxKb}KB.`,
                   },
                   {
                     q: "Does the signature resizer support background cleaning?",
-                    a: "Yes. Scanned signatures on white paper often have gray camera shadows. Our tool cleans background noise, makes it pure white or transparent, and rescales it to the required dimensions.",
+                    a: "Yes. Scanned signatures on white paper often have gray camera shadows that look unprofessional and use up valuable file data. Our built-in tool cleans background noise, transforms it to pure white, and rescales it to the required dimensions while darkening the ink.",
                   },
+                  {
+                    q: "Why is the exam portal saying my file is invalid?",
+                    a: "Exam portals are very strict. This error usually occurs if your file is either out of the required dimension bounds (width/height in pixels), out of the required file size bounds (KB), or saved in the wrong file format (e.g., PNG instead of JPG). Our tool guarantees all three rules are met perfectly.",
+                  },
+                  {
+                    q: "Is it safe to upload my photo and signature?",
+                    a: "Yes. In fact, FileFit never actually uploads your files to any external server. All cropping, resizing, and compression happens securely right inside your web browser using HTML5 Canvas. Your sensitive candidate identity remains entirely private.",
+                  }
                 ].map(({ q, a }) => (
-                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-[#fafafa] space-y-1.5">
-                    <h4 className="text-gray-800 text-sm font-semibold">{q}</h4>
-                    <p className="text-gray-500 text-xs leading-relaxed">{a}</p>
+                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-white shadow-sm space-y-2 hover:shadow-md transition-shadow">
+                    <h4 className="text-gray-900 text-base font-semibold">{q}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-3">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Related Exam Presets</span>
+            <div className="space-y-3 pt-6 border-t border-[#e9ecef]">
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Explore Related Exam Presets</span>
               <div className="flex flex-wrap gap-2">
                 {EXAMS_DATA.filter(e => e.slug !== examSlug).map((e) => (
                   <Link

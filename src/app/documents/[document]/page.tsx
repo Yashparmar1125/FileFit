@@ -191,42 +191,77 @@ export default async function DocumentPage({ params }: RouteParams) {
             </div>
           </div>
 
-          {/* FAQs */}
-          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-gray-900 text-xl sm:text-2xl font-bold">About {doc.name} Upload Guidelines</h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                When applying for visa forms, ID renewals (like Aadhaar, PAN card, driving licenses), or university admissions, you must upload scanned documents that strictly fit specified dimensions and file size boundaries.
-                FileFit solves this by running custom image interpolation and document optimization directly in your browser, maintaining layout readability under the {doc.maxSizeKb}KB threshold.
+          {/* Comprehensive SEO Content Section for AdSense Value */}
+          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-10">
+            {/* Guide Section 1 */}
+            <div className="space-y-4">
+              <h2 className="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight">The Complete Guide to {doc.name} Upload Guidelines</h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                When applying for visa forms, ID renewals (like Aadhaar, PAN card, driving licenses), or university admissions, you must upload scanned documents that strictly fit specified dimensions and file size boundaries. Government portals and institutional websites are notoriously strict; if your file is even one kilobyte over the limit, the upload will fail.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                FileFit solves this by running custom image interpolation and document optimization directly in your browser. We ensure your document maintains maximum readability and layout integrity while perfectly fitting under the exact {doc.maxSizeKb}KB threshold required for a successful {doc.name} submission.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-gray-900 text-lg font-bold flex items-center gap-2">
-                <HelpCircle className="h-5 w-5 text-brand-500" />
+            {/* Guide Section 2 */}
+            <div className="bg-[#fafafa] border border-[#e9ecef] p-6 sm:p-8 rounded-2xl space-y-5">
+              <h3 className="text-gray-900 text-xl font-bold">Step-by-Step: Formatting Your {doc.name}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">1. Upload Your Document</h4>
+                  <p className="text-sm text-gray-600">Scan or photograph your physical document and load it into the workspace. Ensure there is good lighting and no glare.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">2. Verify Guidelines</h4>
+                  <p className="text-sm text-gray-600">The tool is pre-configured with the exact official specs for a {doc.name}, taking the guesswork out of the process.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">3. Auto-Formatting</h4>
+                  <p className="text-sm text-gray-600">Simply click process, and the tool will auto-crop, scale, and compress the file to meet the strict limits.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">4. Download & Submit</h4>
+                  <p className="text-sm text-gray-600">Download the finalized file and upload it straight to your application portal without fear of rejection.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Expanded FAQ */}
+            <div className="space-y-6">
+              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold flex items-center gap-2">
+                <HelpCircle className="h-6 w-6 text-brand-500" />
                 Frequently Asked Questions
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {[
                   {
-                    q: `What is the maximum file size allowed for a ${doc.name}?`,
-                    a: `The maximum upload limit for ${doc.name} is ${doc.maxSizeKb}KB. FileFit will dynamically compress the file to stay strictly below this limit.`,
+                    q: `What is the exact maximum file size allowed for a ${doc.name}?`,
+                    a: `The maximum official upload limit for a ${doc.name} is ${doc.maxSizeKb}KB. FileFit will dynamically compress your uploaded file to stay strictly below this limit so it will be accepted by the portal.`,
                   },
                   {
-                    q: "Are my document uploads private?",
-                    a: "Yes. FileFit performs all file operations client-side in browser memory. Your private documents are never sent to a cloud server or stored.",
+                    q: "Are my sensitive identity documents private and secure?",
+                    a: "Yes, 100% secure. Documents like passports, ID cards, and tax forms contain highly sensitive data. FileFit performs all file cropping and compression entirely client-side, right in your device's browser memory. Your private documents are never sent to a cloud server or stored anywhere.",
                   },
+                  {
+                    q: "What if my original scan is too blurry after compression?",
+                    a: "If your file must be compressed significantly to hit the limit, you may notice some quality loss. For the best outcome, start with a highly illuminated, clear original photograph or use a flatbed scanner. Our intelligent scaling algorithm prioritizes text readability over background resolution.",
+                  },
+                  {
+                    q: "Which file format should I use?",
+                    a: `Most government and visa portals require either a JPEG or PDF. Our tool is configured to output the exact format required by the official guidelines for a ${doc.name}.`,
+                  }
                 ].map(({ q, a }) => (
-                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-[#fafafa] space-y-1.5">
-                    <h4 className="text-gray-800 text-sm font-semibold">{q}</h4>
-                    <p className="text-gray-500 text-xs leading-relaxed">{a}</p>
+                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-white shadow-sm space-y-2 hover:shadow-md transition-shadow">
+                    <h4 className="text-gray-900 text-base font-semibold">{q}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-3">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Related Document Presets</span>
+            <div className="space-y-3 pt-6 border-t border-[#e9ecef]">
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Explore Related Document Presets</span>
               <div className="flex flex-wrap gap-2">
                 {DOCUMENTS_DATA.filter(d => d.slug !== docSlug).map((d) => (
                   <Link

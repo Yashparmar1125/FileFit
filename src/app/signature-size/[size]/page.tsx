@@ -132,41 +132,77 @@ export default async function SignatureSizePage({ params }: RouteParams) {
             </div>
           </div>
 
-          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-8">
-            <div className="space-y-3">
-              <h2 className="text-gray-900 text-xl sm:text-2xl font-bold">Why compress signature scans to under {formattedSize}?</h2>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Government entrance exams, bank applications, and visa portals enforce a strict file limit for candidate signature uploads, which is commonly required to be under {formattedSize}.
-                Our signature cleaning tool whitens background noise, trims empty margins, and rescales the file to fit the required {formattedSize} limit.
+          {/* Comprehensive SEO Content Section for AdSense Value */}
+          <section className="max-w-4xl mx-auto mt-16 pt-12 border-t border-[#e9ecef] space-y-10">
+            {/* Guide Section 1 */}
+            <div className="space-y-4">
+              <h2 className="text-gray-900 text-2xl sm:text-3xl font-extrabold tracking-tight">The Complete Guide to Optimizing Signatures to {formattedSize}</h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                When applying for government entrance exams, opening a bank account online, or completing a visa application, uploading a digital copy of your signature is almost always required. These highly specific portals enforce strict file size limits, frequently mandating that signature images must be strictly under <strong>{formattedSize}</strong> to be accepted.
+              </p>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Taking a photo of your signature with a smartphone often results in a file that is too large, with gray shadows and poor contrast. Our {formattedSize} signature cleaning tool solves this by removing background noise, whitening the paper, darkening the ink, and rescaling the file to fit perfectly within the {formattedSize} limit.
               </p>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-gray-900 text-lg font-bold flex items-center gap-2">
-                <HelpCircle className="h-5 w-5 text-brand-500" />
-                Frequently Asked Questions
+            {/* Guide Section 2 */}
+            <div className="bg-[#fafafa] border border-[#e9ecef] p-6 sm:p-8 rounded-2xl space-y-5">
+              <h3 className="text-gray-900 text-xl font-bold">Step-by-Step: How to Clean & Resize Your Signature to {formattedSize}</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">1. Photograph Your Signature</h4>
+                  <p className="text-sm text-gray-600">Sign on a blank piece of white paper using black or blue ink. Take a clear photo of it and upload it into the workspace above.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">2. Crop and Clean</h4>
+                  <p className="text-sm text-gray-600">Use the built-in crop tool to frame just the signature. Adjust the brightness/threshold slider to make the background pure white.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">3. Automatic Compression</h4>
+                  <p className="text-sm text-gray-600">Once cleaned, our engine will automatically compress the dimensions and file data to ensure it stays strictly below the {formattedSize} limit.</p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800 mb-2">4. Download Instantly</h4>
+                  <p className="text-sm text-gray-600">Download your finalized signature. Because the processing is client-side, your signature is never saved on any external servers.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Expanded FAQ */}
+            <div className="space-y-6">
+              <h3 className="text-gray-900 text-xl sm:text-2xl font-bold flex items-center gap-2">
+                <HelpCircle className="h-6 w-6 text-brand-500" />
+                Frequently Asked Questions about {formattedSize} Signatures
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {[
                   {
-                    q: "How does the signature background cleaner work?",
-                    a: "The signature cleaner analyzes the brightness values (RGB) of every pixel. It applies a high-pass threshold slider, transforming off-white paper and dark shadows into pure white or transparent space, while preserving and darkening ink lines.",
+                    q: "How does the signature background cleaner actually work?",
+                    a: "The signature cleaner analyzes the brightness values (RGB) of every pixel in your uploaded photo. By applying a high-pass threshold slider, it transforms off-white paper colors and dark camera shadows into pure white, while simultaneously preserving and darkening the actual ink lines of your signature.",
                   },
                   {
-                    q: `How do I crop and compress a signature under ${formattedSize}?`,
-                    a: `Simply upload a photo of your signature. Use the crop option to select the bounding box of your signature. Then, slide the threshold to whiten the background and click process. The tool automatically rescales and compresses the image to stay strictly under ${formattedSize}.`,
+                    q: `Will cropping my signature help me reach the ${formattedSize} limit?`,
+                    a: `Yes, absolutely! Cropping out the unnecessary empty white space around your signature not only makes it look more professional for official applications, but it also physically removes data from the image. This makes it much easier for our engine to hit the target ${formattedSize} limit without losing any ink quality.`,
                   },
+                  {
+                    q: "Is it safe to upload my signature online?",
+                    a: "Uploading signatures to traditional cloud-based tools is risky. However, FileFit is fundamentally different. Our tool operates 100% locally within your own web browser. We never upload, transmit, or store your highly sensitive signature image. It remains completely private on your device.",
+                  },
+                  {
+                    q: "Should I use black or blue ink for best results?",
+                    a: "Both black and dark blue ink work perfectly with our threshold cleaner. For the absolute best contrast and smallest file sizes, we recommend using a thick black pen (like a gel pen or marker) on a plain, unlined white sheet of paper.",
+                  }
                 ].map(({ q, a }) => (
-                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-[#fafafa] space-y-1.5">
-                    <h4 className="text-gray-800 text-sm font-semibold">{q}</h4>
-                    <p className="text-gray-500 text-xs leading-relaxed">{a}</p>
+                  <div key={q} className="p-5 rounded-xl border border-[#e9ecef] bg-white shadow-sm space-y-2 hover:shadow-md transition-shadow">
+                    <h4 className="text-gray-900 text-base font-semibold">{q}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{a}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-3">
-              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Related Signature Sizes</span>
+            <div className="space-y-3 pt-6 border-t border-[#e9ecef]">
+              <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider block">Explore Related Signature Sizes</span>
               <div className="flex flex-wrap gap-2">
                 {SIG_SIZES_DATA.filter(item => item.size !== size).map((item) => (
                   <Link
