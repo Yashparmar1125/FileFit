@@ -35,17 +35,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   addRoute("/tools/signature/resize", 0.8);
   addRoute("/tools/signature/crop", 0.7);
 
-  // 3. Exams dynamic route presets
-  EXAMS_DATA.forEach((exam) => {
-    addRoute(`/exams/${exam.slug}`, 0.9);
-  });
-
-  // 4. Documents dynamic route presets
-  DOCUMENTS_DATA.forEach((doc) => {
-    addRoute(`/documents/${doc.slug}`, 0.9);
-  });
-
-
+  // Removed dynamic routes (exams and documents) to prevent programmatic SEO doorway page penalties.
+  // We only index high-quality static tools and guides.
 
   return routes;
 }

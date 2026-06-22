@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
     alternates: {
       canonical: `/exams/${examSlug}`,
     },
+    robots: { index: false },
   };
 }
 

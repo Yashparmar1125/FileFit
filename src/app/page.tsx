@@ -191,6 +191,30 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── Latest Guides ──────────────────────────────────── */}
+        <section className="bg-white py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold text-[#0F0F0F] mb-12">Latest Privacy & Optimization Guides</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <Link href="/guides/client-side-privacy" className="group text-left p-6 sm:p-8 rounded-2xl border-2 border-gray-200 hover:border-[#0F0F0F] hover:shadow-brutal transition-all">
+                <Shield className="h-8 w-8 text-emerald-500 mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5C2E]">The Ultimate Guide to Client-Side File Privacy</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">Why you should never upload your passport or sensitive IDs to a random cloud server, and how local WASM technology fixes this.</p>
+              </Link>
+              <Link href="/guides/indian-government-portals" className="group text-left p-6 sm:p-8 rounded-2xl border-2 border-gray-200 hover:border-[#0F0F0F] hover:shadow-brutal transition-all">
+                <Zap className="h-8 w-8 text-[#FF5C2E] mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#FF5C2E]">Formatting Documents for Indian Government Portals</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">A complete breakdown of the strict photo and signature requirements for UPSC, SSC, IBPS, and Aadhaar.</p>
+              </Link>
+            </div>
+            <div className="mt-12">
+              <Link href="/guides" className="inline-flex items-center text-[#FF5C2E] font-bold hover:underline">
+                View all guides <ArrowRight className="ml-1 h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />

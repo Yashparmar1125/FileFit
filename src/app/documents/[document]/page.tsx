@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
     alternates: {
       canonical: `/documents/${docSlug}`,
     },
+    robots: { index: false },
   };
 }
 
